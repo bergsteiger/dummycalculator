@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.Calculator" Type="System.String" Value="Calculator" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.FirstTest" Type="System.String" Value="FirstTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.MulTest" Type="System.String" Value="MulTest" Category="General" IsBrowsable="False" />
+</TgConfig>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.170,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Tests\FirstTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.517,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
+    <Transaction>2014.02.22 16:29:48.460,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\CalculatorGUITest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\FirstTest.pas</Transaction>
+    <Transaction>2014.02.22 16:36:44.769,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Unit1.pas</Transaction>
+    <Transaction>2014.02.22 16:37:04.611,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\PlusTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
