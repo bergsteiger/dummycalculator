@@ -20,7 +20,8 @@ uses
 implementation
 
   uses
-   SysUtils;
+    SysUtils,
+    BaseClasses;
 
 const
  cA = '5';
@@ -29,13 +30,21 @@ const
 
 procedure TCalculatorOperationTest.LogicTestDiv;
 var
-  x1, x2  : string;
+  x1, x2, l_FileName, l_TestName : string;
   result : Single;
 begin
   x1:= cA;
   x2:= cB;
   result := StrToFloat(TCalculator.Divide(x2, x1));
   CheckTrue(2 = result);
+
+  l_FileName:= ClassName + FTestName;
+
+  Logger.ToLog(l_FileName, x1);
+  Logger.ToLog(l_FileName, x2);
+  Logger.ToLog(l_FileName, FloatToStr(Result));
+
+  Logger.CloseOutputFile;
 end;
 
 procedure TCalculatorOperationTest.LogicTestSub;

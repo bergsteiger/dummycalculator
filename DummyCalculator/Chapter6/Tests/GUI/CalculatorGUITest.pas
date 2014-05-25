@@ -4,7 +4,8 @@ interface
 
 uses
   TestFrameWork,
-  MainForm
+  MainForm,
+  BaseClasses
   ;
 
 type

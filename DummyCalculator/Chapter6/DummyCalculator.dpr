@@ -13,14 +13,17 @@ uses
   DivTest in 'Tests\GUI\DivTest.pas',
   RandomPlusTest in 'Tests\GUI\RandomPlusTest.pas',
   Calculator in 'Logic\Calculator.pas',
-  CalculatorOperationTest in 'Tests\Logic\CalculatorOperationTest.pas';
+  CalculatorOperationTest in 'Tests\Logic\CalculatorOperationTest.pas',
+  BaseClasses in 'Tests\MiscUtils\BaseClasses.pas';
 
 {$R *.res}
-
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfmMain, fmMain);
+
+  Logger := TLogger.Create;
+
   GUITestRunner.RunRegisteredTestsModeless;
   Application.Run;
 end.
