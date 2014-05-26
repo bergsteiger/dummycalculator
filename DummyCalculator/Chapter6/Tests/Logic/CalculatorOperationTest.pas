@@ -27,10 +27,24 @@ const
  cA = '5';
  cB = '10';
 { TCalculatorOperationTest }
+function AddArgumentsToLog(aLogger: TLogger;
+                           aX1, aX2, aResult: string;
+                           aTestCase: TTestCase): Boolean;
+begin
+  Result:= False;
+
+  aLogger.OpenTest(aTestCase);
+  aLogger.ToLog(aX1);
+  aLogger.ToLog(aX2);
+  aLogger.ToLog(aResult);
+  aLogger.CheckWithEtalon;
+
+  Result:= True;
+end;
 
 procedure TCalculatorOperationTest.LogicTestDiv;
 var
-  x1, x2, l_FileName, l_TestName : string;
+  x1, x2 : string;
   result : Single;
 begin
   x1:= cA;
@@ -38,13 +52,7 @@ begin
   result := StrToFloat(TCalculator.Divide(x2, x1));
   CheckTrue(2 = result);
 
-  l_FileName:= ClassName + FTestName;
-
-  Logger.ToLog(l_FileName, x1);
-  Logger.ToLog(l_FileName, x2);
-  Logger.ToLog(l_FileName, FloatToStr(Result));
-
-  Logger.CloseOutputFile;
+  AddArgumentsToLog(Logger, x1, x2, FloatToStr(result), Self);
 end;
 
 procedure TCalculatorOperationTest.LogicTestSub;
@@ -57,6 +65,7 @@ begin
   result := StrToFloat(TCalculator.Sub(x2, x1));
   CheckTrue(5 = result);
 
+  AddArgumentsToLog(Logger, x1, x2, FloatToStr(result), Self);
 end;
 
 procedure TCalculatorOperationTest.LogicTestSubError;
@@ -79,6 +88,8 @@ begin
   x2:= cB;
   result := StrToFloat(TCalculator.Mul(x2, x1));
   CheckTrue(50 = result);
+
+  AddArgumentsToLog(Logger, x1, x2, FloatToStr(result), Self);
 end;
 
 procedure TCalculatorOperationTest.LogicTestAdd;
@@ -90,6 +101,8 @@ begin
   x2:= cB;
   result := StrToFloat(TCalculator.Add(x2, x1));
   CheckTrue(15 = result);
+
+  AddArgumentsToLog(Logger, x1, x2, FloatToStr(result), Self);
 end;
 
 initialization

@@ -2,10 +2,13 @@ unit BaseClasses;
 
 interface
 
+uses
+  TestFrameWork;
+
 const
   cEtalonSuffix = '.etalon';
   cTestSuffix = '.out';
-  cTestDirecory = 'TestSet';
+  cTestFolder = 'TestSet';
 
 type
   // Паттерн "одиночка"
@@ -14,25 +17,21 @@ type
     class var Instance: TLogger;
     FFileForOutput,
     FFileEtalon: TextFile;
-    FTestFolderName : string;
+    FTestFolderName,
+    FTestFilePath,
+    FEtalonFilePath : string;
+  private
+    function TestOutputFolderPath: string;
+    function TestSetFolderName: string;
+    function Is2FilesEqual(const aFilePathTest, aFilePathEtalon: string): Boolean;
+    function IsExistEtalonFile: Boolean;
+    procedure OpenOutputFile(const aFileName: string);
   public
     class function NewInstance: TObject; override;
 
-    function OutputPath: string;
-    function TestSetFolderName: string;
-    procedure OpenOutputFile(const aFileName: string);
-    procedure CloseOutputFile;
-
-    procedure CheckWithEtalon(const aFileName: string);
-    procedure CheckOutputWithInput(const aSt: string;
-                                   const anExtraFileName: string = '');
-    procedure ToLog(const aFileName: string;
-                    const aParametr: string);
-    procedure CheckEtalonInFolder(aHeaderBegin: AnsiChar);
-      {* Сравнивает файлы в папке с названием класса с эталонами в папке с суффиксом '_Etalon'. }
-    procedure ClearTestFolder;
-    function OutputFolderNameWitEtalons: string;
-       {* Директория для эталонов. }
+    procedure OpenTest(aTestCase: TTestCase);
+    procedure ToLog(const aParametr: string);
+    function CheckWithEtalon : Boolean;
   end;//TLogger
 
 var
@@ -42,34 +41,62 @@ implementation
 
 uses
   SysUtils,
-  vcl.Forms;
+  vcl.Forms,
+  System.Classes,
+  Winapi.Windows;
 
-{ TSingleton }
+{ TLogger }
 
-procedure TLogger.CheckEtalonInFolder(aHeaderBegin: AnsiChar);
+function TLogger.CheckWithEtalon : Boolean;
 begin
+  Result := False;
+  if IsExistEtalonFile then
+  begin
+    CloseFile(FFileForOutput);
+    if Is2FilesEqual(FTestFilePath, FEtalonFilePath) then
+      Result:= True;
+  end
+  else
+  begin
+    Assert(FTestFilePath<>'');
+    Assert(FEtalonFilePath<>'');
 
+    CloseFile(FFileForOutput);
+
+    CopyFile(PWideChar(FTestFilePath),
+             PWideChar(FEtalonFilePath),
+             True);
+    Result := True;
+  end;
 end;
 
-procedure TLogger.CheckOutputWithInput(const aSt: string;
-                                       const anExtraFileName: string = '');
+function TLogger.Is2FilesEqual(const aFilePathTest,
+                                     aFilePathEtalon: string): Boolean;
+var
+  l_msFileTest, l_msFileEtalon: TMemoryStream;
 begin
-
+  Result := False;
+  l_msFileTest := TMemoryStream.Create;
+  try
+    l_msFileTest.LoadFromFile(aFilePathTest);
+    l_msFileEtalon := TMemoryStream.Create;
+    try
+      l_msFileEtalon.LoadFromFile(aFilePathEtalon);
+      if l_msFileTest.Size = l_msFileEtalon.Size then
+        Result := CompareMem(l_msFileTest.Memory, l_msFileEtalon.memory, l_msFileTest.Size);
+    finally
+      l_msFileEtalon.Free;
+    end;
+  finally
+    l_msFileTest.Free;
+  end
 end;
 
-procedure TLogger.CheckWithEtalon(const aFileName: string);
+function TLogger.IsExistEtalonFile: Boolean;
 begin
-
-end;
-
-procedure TLogger.ClearTestFolder;
-begin
-
-end;
-
-procedure TLogger.CloseOutputFile;
-begin
-  CloseFile(FFileForOutput);
+  Result:= False;
+  if FileExists(FEtalonFilePath) then
+    Result:= True;
 end;
 
 class function TLogger.NewInstance: TObject;
@@ -88,38 +115,36 @@ begin
   Rewrite(FFileForOutput);
 end;
 
-function TLogger.OutputFolderNameWitEtalons: string;
+procedure TLogger.OpenTest(aTestCase: TTestCase);
+var
+  l_FileName : string;
 begin
+  l_FileName := aTestCase.ClassName + aTestCase.GetName;
+  FTestFilePath := TestOutputFolderPath + l_FileName + cTestSuffix;
+  FEtalonFilePath := TestOutputFolderPath + l_FileName + cEtalonSuffix;
 
+  if not DirectoryExists(TestOutputFolderPath) then
+    CreateDir(TestOutputFolderPath);
+
+  if (TTextRec(FFileForOutput).Mode = fmOpenRead) or
+     (TTextRec(FFileForOutput).Mode = fmOpenWrite)  then
+  begin
+    OpenOutputFile(FTestFilePath);
+  end;
 end;
 
-function TLogger.OutputPath: string;
+function TLogger.TestOutputFolderPath: string;
 begin
   Result := ExtractFilePath(ParamStr(0)) + TestSetFolderName + '\'
 end;
 
 function TLogger.TestSetFolderName: string;
 begin
-  Result := cTestDirecory;
+  Result := cTestFolder;
 end;
 
-procedure TLogger.ToLog(const aFileName: string;
-                        const aParametr: string);
-var
-  l_FilePath : string;
+procedure TLogger.ToLog(const aParametr: string);
 begin
-  Assert(aFileName<>'');
-  l_FilePath := OutputPath + aFileName + cTestSuffix;
-
-  if not DirectoryExists(OutputPath) then
-    CreateDir(OutputPath);
-
-  if (TTextRec(FFileForOutput).Mode = fmOpenRead) or
-     (TTextRec(FFileForOutput).Mode = fmOpenWrite)  then
-  begin
-    OpenOutputFile(l_FilePath);
-  end;
-
   Write(FFileForOutput, aParametr + ' ');
 end;
 
