@@ -114,7 +114,7 @@ end;
 
 procedure TLogger.ToLog(const aParametr: string);
 begin
-  Write(FTestFile, aParametr + ' ');
+  Writeln(FTestFile, aParametr + ' ');
 end;
 
 initialization

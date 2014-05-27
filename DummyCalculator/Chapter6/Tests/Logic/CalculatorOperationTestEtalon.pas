@@ -45,7 +45,6 @@ begin
   x1:= cA;
   x2:= cB;
   result := StrToFloat(TCalculator.Divide(x2, x1));
-  CheckTrue(2 = result);
 
   CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
 end;
@@ -58,7 +57,6 @@ begin
   x1:= cA;
   x2:= cB;
   result := StrToFloat(TCalculator.Sub(x2, x1));
-  CheckTrue(5 = result);
 
   CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
 end;
@@ -71,7 +69,6 @@ begin
   x1:= cA;
   x2:= cB;
   result := StrToFloat(TCalculator.Mul(x2, x1));
-  CheckTrue(50 = result);
 
   CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
 end;
@@ -84,7 +81,6 @@ begin
   x1:= cA;
   x2:= cB;
   result := StrToFloat(TCalculator.Add(x2, x1));
-  CheckTrue(15 = result);
 
   CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
 end;
