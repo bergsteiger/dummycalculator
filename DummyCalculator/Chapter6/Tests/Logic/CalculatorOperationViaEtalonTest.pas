@@ -14,7 +14,7 @@ uses
     procedure TestMul;
     procedure TestAdd;
     procedure TestSub;
-  end;//TCalculatorOperationTest
+  end;//TCalculatorOperationViaEtalonTest
 
 implementation
 
@@ -25,7 +25,7 @@ implementation
 const
  cA = '5';
  cB = '10';
-{ TCalculatorOperationTest }
+{ TCalculatorOperationViaEtalonTest }
 function AddArgumentsToLog(aLogger: TLogger;
                            aX1, aX2, aResult: string;
                            aTestCase: TTestCase): Boolean;

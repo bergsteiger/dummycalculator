@@ -15,7 +15,7 @@ uses
     procedure TestAdd;
     procedure TestSub;
     procedure TestSubError;
-  end;//TCalculatorOperationTest
+  end;//TCalculatorOperationViaLogicTest
 
 implementation
 
@@ -25,7 +25,7 @@ implementation
 const
  cA = '5';
  cB = '10';
-{ TCalculatorOperationTest }
+{ TCalculatorOperationViaLogicTest }
 
 procedure TCalculatorOperationViaLogicTest.TestDiv;
 var
