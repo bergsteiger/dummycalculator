@@ -95,7 +95,7 @@
         <DCCReference Include="Tests\GUI\DivTest.pas"/>
         <DCCReference Include="Tests\GUI\RandomPlusTest.pas"/>
         <DCCReference Include="Logic\Calculator.pas"/>
-        <DCCReference Include="Tests\Logic\CalculatorOperationTest.pas"/>
+        <DCCReference Include="Tests\Logic\CalculatorOperationTestEtalon.pas"/>
         <DCCReference Include="Tests\MiscUtils\Tests.Logger.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

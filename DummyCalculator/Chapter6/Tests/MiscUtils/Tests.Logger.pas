@@ -14,70 +14,55 @@ type
   TLogger = class
   strict private
     FTestFile : TextFile;
-    FTestFolderName,
     FTestFilePath,
     FEtalonFilePath : string;
   private
     function TestOutputFolderPath: string;
-    function TestSetFolderName: string;
     function Is2FilesEqual(const aFilePathTest, aFilePathEtalon: string): Boolean;
     function IsExistEtalonFile: Boolean;
-    procedure OpenOutputFile(const aFileName: string);
   public
     class constructor Create;
     class destructor Destroy;
-    constructor Create;
     procedure OpenTest(aTestCase: TTestCase);
     procedure ToLog(const aParametr: string);
-    procedure CheckWithEtalon;
+    function CheckWithEtalon: Boolean;
   end;//TLogger
 
 var
-  Logger : TLogger;
+  g_Logger : TLogger;
 
 implementation
 
 uses
   SysUtils,
-  vcl.Forms,
   System.Classes,
   Winapi.Windows;
 
 { TLogger }
 
-procedure TLogger.CheckWithEtalon;
+function TLogger.CheckWithEtalon: Boolean;
 begin
+  Result := False;
+
+  Assert(FTestFilePath<>'');
+  Assert(FEtalonFilePath<>'');
+
+  CloseFile(FTestFile);
+
   if IsExistEtalonFile then
-  begin
-    CloseFile(FTestFile);
-    Is2FilesEqual(FTestFilePath, FEtalonFilePath);
-  end
+    Result := Is2FilesEqual(FTestFilePath, FEtalonFilePath)
   else
-  begin
-    Assert(FTestFilePath<>'');
-    Assert(FEtalonFilePath<>'');
-
-    CloseFile(FTestFile);
-
-    CopyFile(PWideChar(FTestFilePath),
-             PWideChar(FEtalonFilePath),
-             True);
-  end;
-end;
-
-constructor TLogger.Create;
-begin
-  FTestFolderName := ExtractFileDir(Application.ExeName);
+    Result := CopyFile(PWideChar(FTestFilePath),PWideChar(FEtalonFilePath),True);
 end;
 
 class destructor TLogger.Destroy;
 begin
-  FreeAndNil(Logger);
+  FreeAndNil(g_Logger);
 end;
 
 class constructor TLogger.Create;
 begin
-  Logger := TLogger.Create();
+  g_Logger := TLogger.Create();
 end;
 
 function TLogger.Is2FilesEqual(const aFilePathTest,
@@ -107,11 +92,6 @@ begin
   Result:= FileExists(FEtalonFilePath);
 end;
 
-procedure TLogger.OpenOutputFile(const aFileName: string);
-begin
-
-end;
-
 procedure TLogger.OpenTest(aTestCase: TTestCase);
 var
   l_FileName : string;
@@ -129,12 +109,7 @@ end;
 
 function TLogger.TestOutputFolderPath: string;
 begin
-  Result := ExtractFilePath(ParamStr(0)) + TestSetFolderName + '\'
-end;
-
-function TLogger.TestSetFolderName: string;
-begin
-  Result := cTestFolder;
+  Result := ExtractFilePath(ParamStr(0)) + cTestFolder + '\'
 end;
 
 procedure TLogger.ToLog(const aParametr: string);

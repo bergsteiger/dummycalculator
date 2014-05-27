@@ -13,7 +13,7 @@ uses
   DivTest in 'Tests\GUI\DivTest.pas',
   RandomPlusTest in 'Tests\GUI\RandomPlusTest.pas',
   Calculator in 'Logic\Calculator.pas',
-  CalculatorOperationTest in 'Tests\Logic\CalculatorOperationTest.pas',
+  CalculatorOperationTestEtalon in 'Tests\Logic\CalculatorOperationTestEtalon.pas',
   Tests.Logger in 'Tests\MiscUtils\Tests.Logger.pas';
 
 {$R *.res}
