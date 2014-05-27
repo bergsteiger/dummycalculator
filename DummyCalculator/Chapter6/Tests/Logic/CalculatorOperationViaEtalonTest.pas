@@ -1,4 +1,4 @@
-unit CalculatorOperationTestEtalon;
+unit CalculatorOperationViaEtalonTest;
 
 interface
 
@@ -8,12 +8,12 @@ uses
   ;
 
  type
-  TCalculatorOperationTestEtalon = class(TTestCase)
+  TCalculatorOperationViaEtalonTest = class(TTestCase)
    published
-    procedure LogicTestDiv;
-    procedure LogicTestMul;
-    procedure LogicTestAdd;
-    procedure LogicTestSub;
+    procedure TestDiv;
+    procedure TestMul;
+    procedure TestAdd;
+    procedure TestSub;
   end;//TCalculatorOperationTest
 
 implementation
@@ -37,7 +37,7 @@ begin
   Result := aLogger.CheckWithEtalon;
 end;
 
-procedure TCalculatorOperationTestEtalon.LogicTestDiv;
+procedure TCalculatorOperationViaEtalonTest.TestDiv;
 var
   x1, x2 : string;
   result : Single;
@@ -49,7 +49,7 @@ begin
   CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
 end;
 
-procedure TCalculatorOperationTestEtalon.LogicTestSub;
+procedure TCalculatorOperationViaEtalonTest.TestSub;
 var
   x1, x2  : string;
   result : Single;
@@ -61,7 +61,7 @@ begin
   CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
 end;
 
-procedure TCalculatorOperationTestEtalon.LogicTestMul;
+procedure TCalculatorOperationViaEtalonTest.TestMul;
 var
   x1, x2  : string;
   result : Single;
@@ -73,7 +73,7 @@ begin
   CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
 end;
 
-procedure TCalculatorOperationTestEtalon.LogicTestAdd;
+procedure TCalculatorOperationViaEtalonTest.TestAdd;
 var
   x1, x2  : string;
   result : Single;
@@ -86,5 +86,5 @@ begin
 end;
 
 initialization
- TestFramework.RegisterTest(TCalculatorOperationTestEtalon.Suite);
+ TestFramework.RegisterTest(TCalculatorOperationViaEtalonTest.Suite);
 end.

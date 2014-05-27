@@ -4,8 +4,7 @@ interface
 
 uses
   TestFrameWork,
-  MainForm,
-  Tests.Logger
+  MainForm
   ;
 
 type

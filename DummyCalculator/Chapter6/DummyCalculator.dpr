@@ -13,8 +13,9 @@ uses
   DivTest in 'Tests\GUI\DivTest.pas',
   RandomPlusTest in 'Tests\GUI\RandomPlusTest.pas',
   Calculator in 'Logic\Calculator.pas',
-  CalculatorOperationTestEtalon in 'Tests\Logic\CalculatorOperationTestEtalon.pas',
-  Tests.Logger in 'Tests\MiscUtils\Tests.Logger.pas';
+  CalculatorOperationViaEtalonTest in 'Tests\Logic\CalculatorOperationViaEtalonTest.pas',
+  Tests.Logger in 'Tests\MiscUtils\Tests.Logger.pas',
+  CalculatorOperationViaLogicTest in 'Tests\Logic\CalculatorOperationViaLogicTest.pas';
 
 {$R *.res}
 begin
