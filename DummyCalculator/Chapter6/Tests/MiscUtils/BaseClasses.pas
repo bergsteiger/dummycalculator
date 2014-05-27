@@ -14,7 +14,7 @@ type
   // Паттерн "одиночка"
   TLogger = class
   strict private
-    class var Instance: TLogger;
+    class var Logger: TLogger;
     FFileForOutput,
     FFileEtalon: TextFile;
     FTestFolderName,
@@ -101,11 +101,11 @@ end;
 
 class function TLogger.NewInstance: TObject;
 begin
-  if not Assigned(Instance) then
+  if not Assigned(Logger) then
   begin
-    Instance := TLogger(inherited NewInstance);
+    Logger := TLogger(inherited NewInstance);
   end;
-  Result := Instance;
+  Result := Logger;
   FTestFolderName := ExtractFileDir(Application.ExeName);
 end;
 
@@ -149,5 +149,7 @@ begin
 end;
 
 initialization
+
+  Logger := TLogger.Create();
 
 end.

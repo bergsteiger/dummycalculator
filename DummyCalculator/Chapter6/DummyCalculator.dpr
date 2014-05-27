@@ -21,9 +21,6 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TfmMain, fmMain);
-
-  Logger := TLogger.Create;
-
   GUITestRunner.RunRegisteredTestsModeless;
   Application.Run;
 end.
