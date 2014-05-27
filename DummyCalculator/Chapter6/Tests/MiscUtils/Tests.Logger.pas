@@ -24,6 +24,8 @@ type
     function IsExistEtalonFile: Boolean;
     procedure OpenOutputFile(const aFileName: string);
   public
+    class constructor Create;
+    class destructor Destroy;
     constructor Create;
     procedure OpenTest(aTestCase: TTestCase);
     procedure ToLog(const aParametr: string);
@@ -68,6 +70,16 @@ begin
   FTestFolderName := ExtractFileDir(Application.ExeName);
 end;
 
+class destructor TLogger.Destroy;
+begin
+  FreeAndNil(Logger);
+end;
+
+class constructor TLogger.Create;
+begin
+  Logger := TLogger.Create();
+end;
+
 function TLogger.Is2FilesEqual(const aFilePathTest,
                                      aFilePathEtalon: string): Boolean;
 var
@@ -97,8 +109,7 @@ end;
 
 procedure TLogger.OpenOutputFile(const aFileName: string);
 begin
-  AssignFile(FTestFile, aFileName);
-  Rewrite(FTestFile);
+
 end;
 
 procedure TLogger.OpenTest(aTestCase: TTestCase);
@@ -110,13 +121,10 @@ begin
   FEtalonFilePath := TestOutputFolderPath + l_FileName + cEtalonSuffix;
 
   if not DirectoryExists(TestOutputFolderPath) then
-    CreateDir(TestOutputFolderPath);
+    ForceDirectories(TestOutputFolderPath);
 
-//  if (TTextRec(FTestFile).Mode = fmOpenRead) or
-//     (TTextRec(FTestFile).Mode = fmOpenWrite)  then
-//  begin
-    OpenOutputFile(FTestFilePath);
-//  end;
+  AssignFile(FTestFile, FTestFilePath);
+  Rewrite(FTestFile);
 end;
 
 function TLogger.TestOutputFolderPath: string;
@@ -135,9 +143,5 @@ begin
 end;
 
 initialization
-  Logger := TLogger.Create();
-
-finalization
-  FreeAndNil(Logger);
 
 end.
