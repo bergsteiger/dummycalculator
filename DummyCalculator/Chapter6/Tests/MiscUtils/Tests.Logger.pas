@@ -1,4 +1,4 @@
-unit BaseClasses;
+unit Tests.Logger;
 
 interface
 
@@ -11,12 +11,9 @@ const
   cTestFolder = 'TestSet';
 
 type
-  // Паттерн "одиночка"
   TLogger = class
   strict private
-    class var Logger: TLogger;
-    FFileForOutput,
-    FFileEtalon: TextFile;
+    FTestFile : TextFile;
     FTestFolderName,
     FTestFilePath,
     FEtalonFilePath : string;
@@ -27,15 +24,14 @@ type
     function IsExistEtalonFile: Boolean;
     procedure OpenOutputFile(const aFileName: string);
   public
-    class function NewInstance: TObject; override;
-
+    constructor Create;
     procedure OpenTest(aTestCase: TTestCase);
     procedure ToLog(const aParametr: string);
-    function CheckWithEtalon : Boolean;
+    procedure CheckWithEtalon;
   end;//TLogger
 
 var
-  Logger: TLogger;
+  Logger : TLogger;
 
 implementation
 
@@ -47,27 +43,29 @@ uses
 
 { TLogger }
 
-function TLogger.CheckWithEtalon : Boolean;
+procedure TLogger.CheckWithEtalon;
 begin
-  Result := False;
   if IsExistEtalonFile then
   begin
-    CloseFile(FFileForOutput);
-    if Is2FilesEqual(FTestFilePath, FEtalonFilePath) then
-      Result:= True;
+    CloseFile(FTestFile);
+    Is2FilesEqual(FTestFilePath, FEtalonFilePath);
   end
   else
   begin
     Assert(FTestFilePath<>'');
     Assert(FEtalonFilePath<>'');
 
-    CloseFile(FFileForOutput);
+    CloseFile(FTestFile);
 
     CopyFile(PWideChar(FTestFilePath),
              PWideChar(FEtalonFilePath),
              True);
-    Result := True;
   end;
+end;
+
+constructor TLogger.Create;
+begin
+  FTestFolderName := ExtractFileDir(Application.ExeName);
 end;
 
 function TLogger.Is2FilesEqual(const aFilePathTest,
@@ -85,34 +83,22 @@ begin
       if l_msFileTest.Size = l_msFileEtalon.Size then
         Result := CompareMem(l_msFileTest.Memory, l_msFileEtalon.memory, l_msFileTest.Size);
     finally
-      l_msFileEtalon.Free;
+      FreeAndNil(l_msFileEtalon);
     end;
   finally
-    l_msFileTest.Free;
+    FreeAndNil(l_msFileTest);
   end
 end;
 
 function TLogger.IsExistEtalonFile: Boolean;
 begin
-  Result:= False;
-  if FileExists(FEtalonFilePath) then
-    Result:= True;
-end;
-
-class function TLogger.NewInstance: TObject;
-begin
-  if not Assigned(Logger) then
-  begin
-    Logger := TLogger(inherited NewInstance);
-  end;
-  Result := Logger;
-  FTestFolderName := ExtractFileDir(Application.ExeName);
+  Result:= FileExists(FEtalonFilePath);
 end;
 
 procedure TLogger.OpenOutputFile(const aFileName: string);
 begin
-  AssignFile(FFileForOutput, aFileName);
-  Rewrite(FFileForOutput);
+  AssignFile(FTestFile, aFileName);
+  Rewrite(FTestFile);
 end;
 
 procedure TLogger.OpenTest(aTestCase: TTestCase);
@@ -126,11 +112,11 @@ begin
   if not DirectoryExists(TestOutputFolderPath) then
     CreateDir(TestOutputFolderPath);
 
-  if (TTextRec(FFileForOutput).Mode = fmOpenRead) or
-     (TTextRec(FFileForOutput).Mode = fmOpenWrite)  then
-  begin
+//  if (TTextRec(FTestFile).Mode = fmOpenRead) or
+//     (TTextRec(FTestFile).Mode = fmOpenWrite)  then
+//  begin
     OpenOutputFile(FTestFilePath);
-  end;
+//  end;
 end;
 
 function TLogger.TestOutputFolderPath: string;
@@ -145,11 +131,13 @@ end;
 
 procedure TLogger.ToLog(const aParametr: string);
 begin
-  Write(FFileForOutput, aParametr + ' ');
+  Write(FTestFile, aParametr + ' ');
 end;
 
 initialization
-
   Logger := TLogger.Create();
+
+finalization
+  FreeAndNil(Logger);
 
 end.

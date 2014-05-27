@@ -21,25 +21,21 @@ implementation
 
   uses
     SysUtils,
-    BaseClasses;
+    Tests.Logger;
 
 const
  cA = '5';
  cB = '10';
 { TCalculatorOperationTest }
-function AddArgumentsToLog(aLogger: TLogger;
+procedure AddArgumentsToLog(aLogger: TLogger;
                            aX1, aX2, aResult: string;
-                           aTestCase: TTestCase): Boolean;
+                           aTestCase: TTestCase);
 begin
-  Result:= False;
-
   aLogger.OpenTest(aTestCase);
   aLogger.ToLog(aX1);
   aLogger.ToLog(aX2);
   aLogger.ToLog(aResult);
   aLogger.CheckWithEtalon;
-
-  Result:= True;
 end;
 
 procedure TCalculatorOperationTest.LogicTestDiv;
