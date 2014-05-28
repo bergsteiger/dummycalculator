@@ -12,10 +12,12 @@ uses
   MulTest in 'Tests\GUI\MulTest.pas',
   DivTest in 'Tests\GUI\DivTest.pas',
   RandomPlusTest in 'Tests\GUI\RandomPlusTest.pas',
-  Calculator in 'Logic\Calculator.pas';
+  Calculator in 'Logic\Calculator.pas',
+  CalculatorOperationViaEtalonTest in 'Tests\Logic\CalculatorOperationViaEtalonTest.pas',
+  Tests.Logger in 'Tests\Utils\Tests.Logger.pas',
+  CalculatorOperationViaLogicTest in 'Tests\Logic\CalculatorOperationViaLogicTest.pas';
 
 {$R *.res}
-
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
