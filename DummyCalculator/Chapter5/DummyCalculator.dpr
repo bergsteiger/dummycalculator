@@ -12,7 +12,8 @@ uses
   MulTest in 'Tests\GUI\MulTest.pas',
   DivTest in 'Tests\GUI\DivTest.pas',
   RandomPlusTest in 'Tests\GUI\RandomPlusTest.pas',
-  Calculator in 'Logic\Calculator.pas';
+  Calculator in 'Logic\Calculator.pas',
+  CalculatorOperationTest in 'Tests\Logic\CalculatorOperationTest.pas';
 
 {$R *.res}
 
