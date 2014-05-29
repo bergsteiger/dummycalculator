@@ -1,4 +1,4 @@
-unit CalculatorOperationViaEtalonTest;
+unit CalculatorOperationRandomSequenceTest;
 
 interface
 
@@ -10,7 +10,7 @@ uses
  type
   TCalcOperation = function (const A, B: string): string of object;
 
-  TCalculatorOperationViaEtalonTest = class(TTestCase)
+  TCalculatorOperationRandomSequenceTest = class(TTestCase)
    private
     procedure CheckOperation(aLogger: TLogger;
                              aX1, aX2: string;
