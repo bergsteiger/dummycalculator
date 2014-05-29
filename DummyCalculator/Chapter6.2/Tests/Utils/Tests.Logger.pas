@@ -24,7 +24,8 @@ type
     class constructor Create;
     class destructor Destroy;
     procedure OpenTest(aTestCase: TTestCase);
-    procedure ToLog(const aParametr: string);
+    procedure ToLog(const aParametr: string); overload;
+    procedure ToLog(const aParametr: Double); overload;
     function CheckWithEtalon: Boolean;
   end;//TLogger
 
@@ -108,6 +109,11 @@ end;
 function TLogger.TestOutputFolderPath: string;
 begin
   Result := ExtractFilePath(ParamStr(0)) + cTestFolder + '\'
+end;
+
+procedure TLogger.ToLog(const aParametr: Double);
+begin
+  Writeln(FTestFile, FloatToStr(aParametr) + ' ');
 end;
 
 procedure TLogger.ToLog(const aParametr: string);

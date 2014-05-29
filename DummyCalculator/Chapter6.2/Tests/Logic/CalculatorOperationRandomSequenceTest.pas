@@ -13,14 +13,16 @@ uses
   TCalculatorOperationRandomSequenceTest = class(TTestCase)
    private
     procedure CheckOperation(aLogger: TLogger;
-                             aX1, aX2: string;
+                             aX1, aX2: Double;
                              anOperation : TCalcOperation);
+    procedure CheckOperationSeq(aLogger: TLogger;
+                                anOperation : TCalcOperation);
    published
     procedure TestDiv;
     procedure TestMul;
     procedure TestAdd;
     procedure TestSub;
-  end;//TCalculatorOperationViaEtalonTest
+  end;//TCalculatorOperationRandomSequenceTest
 
 implementation
 
@@ -32,57 +34,46 @@ const
  cA = '5';
  cB = '10';
 { TCalculatorOperationViaEtalonTest }
-procedure TCalculatorOperationViaEtalonTest.CheckOperation(aLogger: TLogger;
-                                                           aX1, aX2: string;
-                                                           anOperation : TCalcOperation);
+procedure TCalculatorOperationRandomSequenceTest.CheckOperationSeq(
+  aLogger: TLogger;
+  anOperation: TCalcOperation);
 begin
   aLogger.OpenTest(Self);
-  aLogger.ToLog(aX1);
-  aLogger.ToLog(aX2);
-  aLogger.ToLog(anOperation(aX1,aX2));
+  CheckOperation(aLogger, 5, 10, anOperation);
   CheckTrue(aLogger.CheckWithEtalon);
 end;
 
-procedure TCalculatorOperationViaEtalonTest.TestDiv;
-var
-  x1, x2 : string;
-begin
-  x1:= cA;
-  x2:= cB;
 
-  CheckOperation(g_Logger, x1, x2, TCalculator.Divide);
+procedure TCalculatorOperationRandomSequenceTest.CheckOperation(
+  aLogger: TLogger;
+  aX1, aX2: Double;
+  anOperation : TCalcOperation);
+begin
+  aLogger.ToLog(aX1);
+  aLogger.ToLog(aX2);
+  aLogger.ToLog(anOperation(FloatToStr(aX1),FloatToStr(aX2)));
 end;
 
-procedure TCalculatorOperationViaEtalonTest.TestSub;
-var
-  x1, x2  : string;
+procedure TCalculatorOperationRandomSequenceTest.TestDiv;
 begin
-  x1:= cA;
-  x2:= cB;
-
-  CheckOperation(g_Logger, x1, x2, TCalculator.Sub);
+  CheckOperationSeq(g_Logger, TCalculator.Divide);
 end;
 
-procedure TCalculatorOperationViaEtalonTest.TestMul;
-var
-  x1, x2  : string;
+procedure TCalculatorOperationRandomSequenceTest.TestSub;
 begin
-  x1:= cA;
-  x2:= cB;
-
-  CheckOperation(g_Logger, x1, x2, TCalculator.Mul);
+  CheckOperationSeq(g_Logger, TCalculator.Sub);
 end;
 
-procedure TCalculatorOperationViaEtalonTest.TestAdd;
-var
-  x1, x2  : string;
+procedure TCalculatorOperationRandomSequenceTest.TestMul;
 begin
-  x1:= cA;
-  x2:= cB;
+  CheckOperationSeq(g_Logger, TCalculator.Mul);
+end;
 
-  CheckOperation(g_Logger, x1, x2, TCalculator.Add);
+procedure TCalculatorOperationRandomSequenceTest.TestAdd;
+begin
+  CheckOperationSeq(g_Logger, TCalculator.Add);
 end;
 
 initialization
- TestFramework.RegisterTest(TCalculatorOperationViaEtalonTest.Suite);
+ TestFramework.RegisterTest(TCalculatorOperationRandomSequenceTest.Suite);
 end.

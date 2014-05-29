@@ -15,7 +15,8 @@ uses
   Calculator in 'Logic\Calculator.pas',
   CalculatorOperationViaEtalonTest in 'Tests\Logic\CalculatorOperationViaEtalonTest.pas',
   Tests.Logger in 'Tests\Utils\Tests.Logger.pas',
-  CalculatorOperationViaLogicTest in 'Tests\Logic\CalculatorOperationViaLogicTest.pas';
+  CalculatorOperationViaLogicTest in 'Tests\Logic\CalculatorOperationViaLogicTest.pas',
+  CalculatorOperationRandomSequenceTest in 'Tests\Logic\CalculatorOperationRandomSequenceTest.pas';
 
 {$R *.res}
 begin
