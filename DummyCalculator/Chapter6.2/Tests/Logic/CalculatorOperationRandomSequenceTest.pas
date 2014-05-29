@@ -30,16 +30,19 @@ implementation
     SysUtils;
 
 
-const
- cA = '5';
- cB = '10';
-{ TCalculatorOperationViaEtalonTest }
+{ TCalculatorOperationRandomSequenceTest }
 procedure TCalculatorOperationRandomSequenceTest.CheckOperationSeq(
   aLogger: TLogger;
   anOperation: TCalcOperation);
+var
+  l_Index : Integer;
 begin
+  RandSeed := 40000;
   aLogger.OpenTest(Self);
-  CheckOperation(aLogger, 5, 10, anOperation);
+  for l_Index := 0 to 10000 do
+    CheckOperation(aLogger,
+                   1000 * Random,
+                   2000 * Random + 1, anOperation);
   CheckTrue(aLogger.CheckWithEtalon);
 end;
 
