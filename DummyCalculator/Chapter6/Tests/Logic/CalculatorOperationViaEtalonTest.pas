@@ -40,49 +40,41 @@ end;
 procedure TCalculatorOperationViaEtalonTest.TestDiv;
 var
   x1, x2 : string;
-  result : Single;
 begin
   x1:= cA;
   x2:= cB;
-  result := StrToFloat(TCalculator.Divide(x2, x1));
 
-  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
+  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, TCalculator.Divide(x2, x1), Self));
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestSub;
 var
   x1, x2  : string;
-  result : Single;
 begin
   x1:= cA;
   x2:= cB;
-  result := StrToFloat(TCalculator.Sub(x2, x1));
 
-  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
+  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, TCalculator.Sub(x2, x1), Self));
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestMul;
 var
   x1, x2  : string;
-  result : Single;
 begin
   x1:= cA;
   x2:= cB;
-  result := StrToFloat(TCalculator.Mul(x2, x1));
 
-  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
+  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, TCalculator.Mul(x2, x1), Self));
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestAdd;
 var
   x1, x2  : string;
-  result : Single;
 begin
   x1:= cA;
   x2:= cB;
-  result := StrToFloat(TCalculator.Add(x2, x1));
 
-  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, FloatToStr(result), Self));
+  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, TCalculator.Add(x2, x1), Self));
 end;
 
 initialization

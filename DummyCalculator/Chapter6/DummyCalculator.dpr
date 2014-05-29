@@ -14,7 +14,7 @@ uses
   RandomPlusTest in 'Tests\GUI\RandomPlusTest.pas',
   Calculator in 'Logic\Calculator.pas',
   CalculatorOperationViaEtalonTest in 'Tests\Logic\CalculatorOperationViaEtalonTest.pas',
-  Tests.Logger in 'Tests\MiscUtils\Tests.Logger.pas',
+  Tests.Logger in 'Tests\Utils\Tests.Logger.pas',
   CalculatorOperationViaLogicTest in 'Tests\Logic\CalculatorOperationViaLogicTest.pas';
 
 {$R *.res}
