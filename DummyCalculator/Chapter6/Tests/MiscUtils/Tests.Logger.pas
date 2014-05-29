@@ -62,7 +62,7 @@ end;
 
 class constructor TLogger.Create;
 begin
-  g_Logger := TLogger.Create();
+  g_Logger := TLogger.Create;
 end;
 
 function TLogger.Is2FilesEqual(const aFilePathTest,
@@ -116,7 +116,5 @@ procedure TLogger.ToLog(const aParametr: string);
 begin
   Writeln(FTestFile, aParametr + ' ');
 end;
-
-initialization
 
 end.
