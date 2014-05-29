@@ -33,7 +33,7 @@ var
 begin
   x1:= cA;
   x2:= cB;
-  CheckTrue('2' = TCalculator.Divide(x2, x1));
+  CheckTrue(2 = StrToFloat(TCalculator.Divide(x2, x1)));
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestSub;
@@ -42,7 +42,7 @@ var
 begin
   x1:= cA;
   x2:= cB;
-  CheckTrue('5' = TCalculator.Sub(x2, x1));
+  CheckTrue(5 = StrToFloat(TCalculator.Sub(x2, x1)));
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestSubError;
@@ -51,7 +51,7 @@ var
 begin
   x1:= cA;
   x2:= cB;
-  CheckFalse('7' = TCalculator.Sub(x2, x1));
+  CheckFalse(7 = StrToFloat(TCalculator.Sub(x2, x1)));
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestMul;
@@ -60,7 +60,7 @@ var
 begin
   x1:= cA;
   x2:= cB;
-  CheckTrue('50' = TCalculator.Mul(x2, x1));
+  CheckTrue(50 = StrToFloat(TCalculator.Mul(x2, x1)));
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestAdd;
@@ -69,7 +69,7 @@ var
 begin
   x1:= cA;
   x2:= cB;
-  CheckTrue('15' = TCalculator.Add(x2, x1));
+  CheckTrue(15 = StrToFloat(TCalculator.Add(x2, x1)));
 end;
 
 initialization
