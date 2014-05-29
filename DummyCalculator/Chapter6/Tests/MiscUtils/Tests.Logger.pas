@@ -42,8 +42,6 @@ uses
 
 function TLogger.CheckWithEtalon: Boolean;
 begin
-  Result := False;
-
   Assert(FTestFilePath<>'');
   Assert(FEtalonFilePath<>'');
 
