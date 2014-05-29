@@ -4,11 +4,17 @@ interface
 
 uses
   TestFrameWork,
-  Calculator
-  ;
+  Calculator,
+  Tests.Logger;
 
  type
+  TCalcOperation = function (const A, B: string): string of object;
+
   TCalculatorOperationViaEtalonTest = class(TTestCase)
+   private
+    procedure CheckOperation(aLogger: TLogger;
+                                aX1, aX2: string;
+                                anOperation : TCalcOperation);
    published
     procedure TestDiv;
     procedure TestMul;
@@ -19,22 +25,23 @@ uses
 implementation
 
   uses
-    SysUtils,
-    Tests.Logger;
+    SysUtils;
+
 
 const
  cA = '5';
  cB = '10';
 { TCalculatorOperationViaEtalonTest }
-function AddArgumentsToLog(aLogger: TLogger;
-                           aX1, aX2, aResult: string;
-                           aTestCase: TTestCase): Boolean;
+procedure TCalculatorOperationViaEtalonTest.CheckOperation(
+                                                    aLogger: TLogger;
+                                                    aX1, aX2: string;
+                                                    anOperation : TCalcOperation);
 begin
-  aLogger.OpenTest(aTestCase);
+  aLogger.OpenTest(Self);
   aLogger.ToLog(aX1);
   aLogger.ToLog(aX2);
-  aLogger.ToLog(aResult);
-  Result := aLogger.CheckWithEtalon;
+  aLogger.ToLog(anOperation(aX1,aX2));
+  CheckTrue(aLogger.CheckWithEtalon);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestDiv;
@@ -44,7 +51,7 @@ begin
   x1:= cA;
   x2:= cB;
 
-  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, TCalculator.Divide(x2, x1), Self));
+  CheckOperation(g_Logger, x1, x2, TCalculator.Divide);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestSub;
@@ -54,7 +61,7 @@ begin
   x1:= cA;
   x2:= cB;
 
-  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, TCalculator.Sub(x2, x1), Self));
+  CheckOperation(g_Logger, x1, x2, TCalculator.Sub);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestMul;
@@ -64,7 +71,7 @@ begin
   x1:= cA;
   x2:= cB;
 
-  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, TCalculator.Mul(x2, x1), Self));
+  CheckOperation(g_Logger, x1, x2, TCalculator.Mul);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestAdd;
@@ -74,7 +81,7 @@ begin
   x1:= cA;
   x2:= cB;
 
-  CheckTrue(AddArgumentsToLog(g_Logger, x1, x2, TCalculator.Add(x2, x1), Self));
+  CheckOperation(g_Logger, x1, x2, TCalculator.Add);
 end;
 
 initialization
