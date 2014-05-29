@@ -29,58 +29,47 @@ const
 
 procedure TCalculatorOperationViaLogicTest.TestDiv;
 var
-  x1, x2  : string;
-  result : Single;
+  x1, x2 : string;
 begin
   x1:= cA;
   x2:= cB;
-  result := StrToFloat(TCalculator.Divide(x2, x1));
-  CheckTrue(2 = result);
+  CheckTrue(2 = StrToFloat(TCalculator.Divide(x2, x1)));
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestSub;
 var
-  x1, x2  : string;
-  result : Single;
+  x1, x2 : string;
 begin
   x1:= cA;
   x2:= cB;
-  result := StrToFloat(TCalculator.Sub(x2, x1));
-  CheckTrue(5 = result);
-
+  CheckTrue(5 = StrToFloat(TCalculator.Sub(x2, x1)));
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestSubError;
 var
-  x1, x2  : string;
-  result : Single;
+  x1, x2 : string;
 begin
   x1:= cA;
   x2:= cB;
-  result := StrToFloat(TCalculator.Sub(x2, x1));
-  CheckFalse(7 = result);
+  CheckFalse(7 = StrToFloat(TCalculator.Sub(x2, x1)));
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestMul;
 var
-  x1, x2  : string;
-  result : Single;
+  x1, x2: string;
 begin
   x1:= cA;
   x2:= cB;
-  result := StrToFloat(TCalculator.Mul(x2, x1));
-  CheckTrue(50 = result);
+  CheckTrue(50 = StrToFloat(TCalculator.Mul(x2, x1)));
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestAdd;
 var
   x1, x2  : string;
-  result : Single;
 begin
   x1:= cA;
   x2:= cB;
-  result := StrToFloat(TCalculator.Add(x2, x1));
-  CheckTrue(15 = result);
+  CheckTrue(15 = StrToFloat(TCalculator.Add(x2, x1)));
 end;
 
 initialization
