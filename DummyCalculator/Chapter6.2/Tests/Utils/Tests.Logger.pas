@@ -37,6 +37,7 @@ implementation
 uses
   SysUtils,
   System.Classes,
+  Calculator,
   Winapi.Windows;
 
 { TLogger }
@@ -113,7 +114,7 @@ end;
 
 procedure TLogger.ToLog(const aParametr: Double);
 begin
-  Writeln(FTestFile, FloatToStr(aParametr) + ' ');
+  ToLog(TCalculator.FloatToStr(aParametr));
 end;
 
 procedure TLogger.ToLog(const aParametr: string);
