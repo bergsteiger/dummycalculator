@@ -22,6 +22,7 @@ implementation
 
 uses
   TestFrameWork,
+  Calculator,
   SysUtils
   ;
 
@@ -47,22 +48,22 @@ begin
   opAdd:
   begin
    aForm.Button1.Click;
-   Check((aForm.Edit3.Text) = FloatToStr(aA + aB));
+   Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA + aB));
   end;
   opMinus:
   begin
    aForm.Button2.Click;
-   Check((aForm.Edit3.Text) = FloatToStr(aA - aB));
+   Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA - aB));
   end;
   opMul:
   begin
    aForm.Button3.Click;
-   Check((aForm.Edit3.Text) = FloatToStr(aA * aB));
+   Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA * aB));
   end;
   opDiv:
   begin
    aForm.Button4.Click;
-   Check((aForm.Edit3.Text) = FloatToStr(aA / aB));
+   Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA / aB));
   end;
  end;//case GetOp
 end;
