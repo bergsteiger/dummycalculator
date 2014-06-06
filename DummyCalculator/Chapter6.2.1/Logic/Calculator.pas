@@ -10,6 +10,7 @@ type
    class function Mul(const A, B: string): string;
    class function Divide(const A, B: string): string;
    class function FloatToStr(aValue: Double): string;
+   class function DivInt(const A, B: string): string;
  end;//TCalculator
 
 implementation
@@ -65,6 +66,11 @@ begin
   x2 := StrToFloat(B);
   x3 := x1 / x2;
   Result := FloatToStr(x3);
+end;
+
+class function TCalculator.DivInt(const A, B: string): string;
+begin
+  Assert(false, 'Not Implemented');
 end;
 
 end.

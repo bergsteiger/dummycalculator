@@ -38,8 +38,12 @@ begin
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestDivInt;
+var
+  x1, x2 : string;
 begin
-  Assert(false, 'Not Implemented')
+  x1:= cA;
+  x2:= cB;
+  CheckTrue(2 = StrToFloat(TCalculator.DivInt(x2, x1)));
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestSub;
