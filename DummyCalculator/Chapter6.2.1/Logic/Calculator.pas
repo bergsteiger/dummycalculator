@@ -69,8 +69,13 @@ begin
 end;
 
 class function TCalculator.DivInt(const A, B: string): string;
+var
+  x1, x2, x3  : Integer;
 begin
-  Assert(false, 'Not Implemented');
+  x1 := StrToInt(A);
+  x2 := StrToInt(B);
+  x3 := x1 div x2;
+  Result := FloatToStr(x3);
 end;
 
 end.
