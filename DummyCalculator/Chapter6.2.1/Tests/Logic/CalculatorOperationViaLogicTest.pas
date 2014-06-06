@@ -15,6 +15,7 @@ uses
     procedure TestAdd;
     procedure TestSub;
     procedure TestSubError;
+    procedure TestDivInt;
   end;//TCalculatorOperationViaLogicTest
 
 implementation
@@ -34,6 +35,11 @@ begin
   x1:= cA;
   x2:= cB;
   CheckTrue(2 = StrToFloat(TCalculator.Divide(x2, x1)));
+end;
+
+procedure TCalculatorOperationViaLogicTest.TestDivInt;
+begin
+  Assert(false, 'Not Implemented')
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestSub;
