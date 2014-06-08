@@ -22,6 +22,7 @@ uses
     procedure TestMul;
     procedure TestAdd;
     procedure TestSub;
+    procedure TestDivInt;
   end;//TCalculatorOperationRandomSequenceTest
 
 implementation
@@ -75,6 +76,11 @@ end;
 procedure TCalculatorOperationRandomSequenceTest.TestAdd;
 begin
   CheckOperationSeq(g_Logger, TCalculator.Add);
+end;
+
+procedure TCalculatorOperationRandomSequenceTest.TestDivInt;
+begin
+  CheckOperationSeq(g_Logger, TCalculator.DivInt);
 end;
 
 initialization
