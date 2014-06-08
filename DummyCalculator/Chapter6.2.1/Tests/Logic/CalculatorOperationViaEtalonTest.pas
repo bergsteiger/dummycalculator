@@ -20,6 +20,7 @@ uses
     procedure TestMul;
     procedure TestAdd;
     procedure TestSub;
+    procedure TestDivInt;
   end;//TCalculatorOperationViaEtalonTest
 
 implementation
@@ -51,6 +52,16 @@ begin
   x2:= cB;
 
   CheckOperation(g_Logger, x1, x2, TCalculator.Divide);
+end;
+
+procedure TCalculatorOperationViaEtalonTest.TestDivInt;
+var
+  x1, x2  : string;
+begin
+  x1:= cA;
+  x2:= cB;
+
+  CheckOperation(g_Logger, x1, x2, TCalculator.DivInt);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestSub;
