@@ -41,9 +41,16 @@ begin
   RandSeed := 40000;
   aLogger.OpenTest(Self);
   for l_Index := 0 to 10000 do
-    CheckOperation(aLogger,
-                   1000 * Random,
-                   2000 * Random + 1, anOperation);
+  begin
+    if Self.GetName = 'TestDivInt' then
+      CheckOperation(aLogger,
+                     Int(2000 * Random),
+                     Int(1000 * Random + 1), anOperation)
+    else
+      CheckOperation(aLogger,
+                     1000 * Random,
+                     2000 * Random + 1, anOperation)
+  end;
   CheckTrue(aLogger.CheckWithEtalon);
 end;
 
