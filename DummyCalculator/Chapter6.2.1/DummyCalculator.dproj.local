@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.077,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Unit1.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Logic\Calculator.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.983,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.911,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\BaseClasses.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.216,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.611,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\PlusTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.170,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Tests\FirstTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.460,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\CalculatorGUITest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\FirstTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.517,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.661,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\BaseClasses.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\Tests.Logger.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.934,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter5\Tests\Logic\CalculatorOperationTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.576,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\Tests\Logic\CalculatorOperationRandomSequenceTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.769,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.913,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTestEtalon.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaEtalonTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.233,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.021,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaLogicTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.388,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Tests\OperationTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.891,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTestEtalon.pas</Transaction>
+  </Transactions>
+</BorlandProject>
