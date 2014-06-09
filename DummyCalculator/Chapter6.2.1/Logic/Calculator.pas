@@ -72,8 +72,8 @@ class function TCalculator.DivInt(const A, B: string): string;
 var
   x1, x2, x3  : Integer;
 begin
-  x1 := StrToInt(A);
-  x2 := StrToInt(B);
+  x1 := round(StrToFloat(A));
+  x2 := round(StrToFloat(B));
   x3 := x1 div x2;
   Result := FloatToStr(x3);
 end;

@@ -30,7 +30,6 @@ implementation
   uses
     SysUtils;
 
-
 { TCalculatorOperationRandomSequenceTest }
 procedure TCalculatorOperationRandomSequenceTest.CheckOperationSeq(
   aLogger: TLogger;
@@ -41,16 +40,9 @@ begin
   RandSeed := 40000;
   aLogger.OpenTest(Self);
   for l_Index := 0 to 10000 do
-  begin
-    if Self.GetName = 'TestDivInt' then
-      CheckOperation(aLogger,
-                     Int(2000 * Random),
-                     Int(1000 * Random + 1), anOperation)
-    else
-      CheckOperation(aLogger,
-                     1000 * Random,
-                     2000 * Random + 1, anOperation)
-  end;
+    CheckOperation(aLogger,
+                   1000 * Random,
+                   2000 * Random + 1, anOperation);
   CheckTrue(aLogger.CheckWithEtalon);
 end;
 
