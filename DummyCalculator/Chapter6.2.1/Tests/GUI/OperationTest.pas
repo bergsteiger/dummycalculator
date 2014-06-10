@@ -8,7 +8,7 @@ uses
   ;
 
 type
-  TOperation = (opAdd, opMinus, opMul, opDiv);
+  TOperation = (opAdd, opMinus, opMul, opDiv, opDivInt);
 
   TOperationTest = class(TCalculatorGUITest)
    protected
@@ -42,28 +42,33 @@ var
 begin
  aA := GetFirstParam;
  aB := GetSecondParam;
- aForm.Edit1.Text := FloatToStr(aA);
- aForm.Edit2.Text := FloatToStr(aB);
+ aForm.edtFirstArg.Text := FloatToStr(aA);
+ aForm.edtSecondArg.Text := FloatToStr(aB);
  case GetOp of
   opAdd:
   begin
-   aForm.Button1.Click;
-   Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA + aB));
+   aForm.btnAdd.Click;
+   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(aA + aB));
   end;
   opMinus:
   begin
-   aForm.Button2.Click;
-   Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA - aB));
+   aForm.btnMinus.Click;
+   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(aA - aB));
   end;
   opMul:
   begin
-   aForm.Button3.Click;
-   Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA * aB));
+   aForm.btnMul.Click;
+   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(aA * aB));
   end;
   opDiv:
   begin
-   aForm.Button4.Click;
-   Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA / aB));
+   aForm.btnDiv.Click;
+   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(aA / aB));
+  end;
+  opDivInt:
+  begin
+   aForm.btnDivInt.Click;
+   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(Round(aA) div Round(aB)));
   end;
  end;//case GetOp
 end;

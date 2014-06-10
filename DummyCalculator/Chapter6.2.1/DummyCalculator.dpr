@@ -16,7 +16,8 @@ uses
   CalculatorOperationViaEtalonTest in 'Tests\Logic\CalculatorOperationViaEtalonTest.pas',
   Tests.Logger in 'Tests\Utils\Tests.Logger.pas',
   CalculatorOperationViaLogicTest in 'Tests\Logic\CalculatorOperationViaLogicTest.pas',
-  CalculatorOperationRandomSequenceTest in 'Tests\Logic\CalculatorOperationRandomSequenceTest.pas';
+  CalculatorOperationRandomSequenceTest in 'Tests\Logic\CalculatorOperationRandomSequenceTest.pas',
+  DivIntTest in 'Tests\GUI\DivIntTest.pas';
 
 {$R *.res}
 begin

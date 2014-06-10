@@ -8,17 +8,19 @@ uses
 
 type
   TfmMain = class(TForm)
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
+    edtFirstArg: TEdit;
+    edtSecondArg: TEdit;
+    edtResult: TEdit;
+    btnAdd: TButton;
+    btnMinus: TButton;
+    btnMul: TButton;
+    btnDiv: TButton;
+    btnDivInt: TButton;
+    procedure btnAddClick(Sender: TObject);
+    procedure btnMinusClick(Sender: TObject);
+    procedure btnMulClick(Sender: TObject);
+    procedure btnDivClick(Sender: TObject);
+    procedure btnDivIntClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,24 +38,29 @@ uses
 
 {$R *.dfm}
 
-procedure TfmMain.Button1Click(Sender: TObject);
+procedure TfmMain.btnAddClick(Sender: TObject);
 begin
- Edit3.Text := TCalculator.Add(Edit1.Text, Edit2.Text);
+ edtResult.Text := TCalculator.Add(edtFirstArg.Text, edtSecondArg.Text);
 end;
 
-procedure TfmMain.Button2Click(Sender: TObject);
+procedure TfmMain.btnMinusClick(Sender: TObject);
 begin
- Edit3.Text := TCalculator.Sub(Edit1.Text, Edit2.Text);
+ edtResult.Text := TCalculator.Sub(edtFirstArg.Text, edtSecondArg.Text);
 end;
 
-procedure TfmMain.Button3Click(Sender: TObject);
+procedure TfmMain.btnMulClick(Sender: TObject);
 begin
- Edit3.Text := TCalculator.Mul(Edit1.Text, Edit2.Text);
+ edtResult.Text := TCalculator.Mul(edtFirstArg.Text, edtSecondArg.Text);
 end;
 
-procedure TfmMain.Button4Click(Sender: TObject);
+procedure TfmMain.btnDivClick(Sender: TObject);
 begin
- Edit3.Text := TCalculator.Divide(Edit1.Text, Edit2.Text);
+ edtResult.Text := TCalculator.Divide(edtFirstArg.Text, edtSecondArg.Text);
+end;
+
+procedure TfmMain.btnDivIntClick(Sender: TObject);
+begin
+ edtResult.Text := TCalculator.DivInt(edtFirstArg.Text, edtSecondArg.Text);
 end;
 
 end.

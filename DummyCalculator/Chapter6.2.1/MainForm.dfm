@@ -3,7 +3,7 @@ object fmMain: TfmMain
   Top = 0
   Caption = 'fmMain'
   ClientHeight = 151
-  ClientWidth = 200
+  ClientWidth = 232
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,64 +13,73 @@ object fmMain: TfmMain
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
-  object Edit1: TEdit
+  object edtFirstArg: TEdit
     Left = 24
     Top = 16
-    Width = 150
+    Width = 200
     Height = 21
     TabOrder = 0
     Text = '1'
   end
-  object Edit2: TEdit
+  object edtSecondArg: TEdit
     Left = 24
     Top = 43
-    Width = 150
+    Width = 200
     Height = 21
     TabOrder = 1
     Text = '2'
   end
-  object Edit3: TEdit
+  object edtResult: TEdit
     Left = 24
     Top = 101
-    Width = 150
+    Width = 200
     Height = 21
     TabOrder = 2
     Text = '<result>'
   end
-  object Button1: TButton
+  object btnAdd: TButton
     Left = 24
     Top = 70
     Width = 33
     Height = 25
     Caption = '+'
     TabOrder = 3
-    OnClick = Button1Click
+    OnClick = btnAddClick
   end
-  object Button2: TButton
+  object btnMinus: TButton
     Left = 63
     Top = 70
     Width = 33
     Height = 25
     Caption = '-'
     TabOrder = 4
-    OnClick = Button2Click
+    OnClick = btnMinusClick
   end
-  object Button3: TButton
+  object btnMul: TButton
     Left = 102
     Top = 70
     Width = 33
     Height = 25
     Caption = '*'
     TabOrder = 5
-    OnClick = Button3Click
+    OnClick = btnMulClick
   end
-  object Button4: TButton
+  object btnDiv: TButton
     Left = 141
     Top = 70
     Width = 33
     Height = 25
     Caption = '/'
     TabOrder = 6
-    OnClick = Button4Click
+    OnClick = btnDivClick
+  end
+  object btnDivInt: TButton
+    Left = 180
+    Top = 70
+    Width = 44
+    Height = 25
+    Caption = 'DivInt'
+    TabOrder = 7
+    OnClick = btnDivIntClick
   end
 end
