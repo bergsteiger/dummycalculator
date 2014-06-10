@@ -8,7 +8,7 @@ uses
   ;
 
 type
-  TOperation = (opAdd, opMinus, opMul, opDiv);
+  TOperation = (opAdd, opMinus, opMul, opDiv, opDivInt);
 
   TOperationTest = class(TCalculatorGUITest)
    protected
@@ -64,6 +64,11 @@ begin
   begin
    aForm.btnDiv.Click;
    Check((aForm.edtResult.Text) = TCalculator.FloatToStr(aA / aB));
+  end;
+  opDivInt:
+  begin
+   aForm.btnDivInt.Click;
+   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(Round(aA) div Round(aB)));
   end;
  end;//case GetOp
 end;
