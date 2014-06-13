@@ -56,7 +56,7 @@ begin
   try
    aProc(l_Logger);
   finally
-   aTestCase.Check(l_Logger.CheckWithEtalon, 'Выходной фай не совпал с эталоном');
+   aTestCase.Check(l_Logger.CheckWithEtalon, 'Выходной файл не совпал с эталоном');
   end;//try..finally
  finally
   FreeAndNil(l_Logger);
