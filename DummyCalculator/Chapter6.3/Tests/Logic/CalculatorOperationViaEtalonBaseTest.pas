@@ -5,13 +5,14 @@ interface
 uses
   TestFrameWork,
   Calculator,
-  Tests.Logger
+  Tests.Logger,
+  CalculatorOperationViaLogicBaseTest
   ;
 
  type
   TCalcOperation = function (const A, B: string): string of object;
 
-  TCalculatorOperationViaEtalonBaseTest = class abstract(TTestCase)
+  TCalculatorOperationViaEtalonBaseTest = class abstract(TCalculatorOperationViaLogicBaseTest)
    private
     procedure DoOp(anOperation : TCalcOperation); overload;
    protected
