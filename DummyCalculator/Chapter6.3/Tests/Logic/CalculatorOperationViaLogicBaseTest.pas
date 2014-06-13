@@ -15,12 +15,32 @@ type
    protected
     procedure DoOpPrim(anOp: TOperation; anOperation : TCalcOperation); virtual; abstract;
    published
-    procedure TestDiv; virtual; abstract;
-    procedure TestMul; virtual; abstract;
-    procedure TestAdd; virtual; abstract;
-    procedure TestSub; virtual; abstract;
+    procedure TestDiv; virtual;
+    procedure TestMul; virtual;
+    procedure TestAdd; virtual;
+    procedure TestSub; virtual;
   end;//TCalculatorOperationViaLogicBaseTest
 
 implementation
+
+procedure TCalculatorOperationViaLogicBaseTest.TestDiv;
+begin
+  DoOpPrim(opDiv, TCalculator.Divide);
+end;
+
+procedure TCalculatorOperationViaLogicBaseTest.TestSub;
+begin
+  DoOpPrim(opSub, TCalculator.Sub);
+end;
+
+procedure TCalculatorOperationViaLogicBaseTest.TestMul;
+begin
+  DoOpPrim(opMul, TCalculator.Mul);
+end;
+
+procedure TCalculatorOperationViaLogicBaseTest.TestAdd;
+begin
+  DoOpPrim(opAdd, TCalculator.Add);
+end;
 
 end.
