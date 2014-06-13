@@ -50,9 +50,7 @@ procedure TCalculatorOperationViaEtalonTest.CheckOperation(aX1, aX2: string;
 begin
   TLogger.Log(Self, procedure (aLogger: TLogger)
    begin
-    aLogger.ToLog(aX1);
-    aLogger.ToLog(aX2);
-    aLogger.ToLog(anOperation(aX1,aX2))
+    CheckOperation(aLogger, aX1, aX2, anOperation);
    end
   );
 end;
