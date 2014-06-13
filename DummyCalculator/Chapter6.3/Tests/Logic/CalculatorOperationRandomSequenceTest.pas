@@ -5,16 +5,13 @@ interface
 uses
   TestFrameWork,
   Calculator,
-  Tests.Logger;
+  Tests.Logger,
+  CalculatorOperationViaEtalonBaseTest
+  ;
 
  type
-  TCalcOperation = function (const A, B: string): string of object;
-
-  TCalculatorOperationRandomSequenceTest = class(TTestCase)
+  TCalculatorOperationRandomSequenceTest = class(TCalculatorOperationViaEtalonBaseTest)
    private
-    procedure CheckOperation(aLogger: TLogger;
-                             aX1, aX2: Double;
-                             anOperation : TCalcOperation);
     procedure CheckOperationSeq(anOperation : TCalcOperation);
    published
     procedure TestDiv;
@@ -25,11 +22,12 @@ uses
 
 implementation
 
-  uses
-    SysUtils;
-
+uses
+  SysUtils
+  ;
 
 { TCalculatorOperationRandomSequenceTest }
+
 procedure TCalculatorOperationRandomSequenceTest.CheckOperationSeq(anOperation: TCalcOperation);
 begin
   RandSeed := 40000;
@@ -43,17 +41,6 @@ begin
                      2000 * Random + 1, anOperation);
    end
   );
-end;
-
-
-procedure TCalculatorOperationRandomSequenceTest.CheckOperation(
-  aLogger: TLogger;
-  aX1, aX2: Double;
-  anOperation : TCalcOperation);
-begin
-  aLogger.ToLog(aX1);
-  aLogger.ToLog(aX2);
-  aLogger.ToLog(anOperation(FloatToStr(aX1),FloatToStr(aX2)));
 end;
 
 procedure TCalculatorOperationRandomSequenceTest.TestDiv;

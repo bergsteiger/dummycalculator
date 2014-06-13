@@ -10,8 +10,6 @@ uses
   ;
 
  type
-  TCalcOperation = function (const A, B: string): string of object;
-
   TCalculatorOperationViaEtalonTest = class(TCalculatorOperationViaEtalonBaseTest)
    private
     procedure CheckOperation(aX1, aX2: string;
@@ -32,6 +30,7 @@ implementation
 const
  cA = '5';
  cB = '10';
+
 { TCalculatorOperationViaEtalonTest }
 
 procedure TCalculatorOperationViaEtalonTest.CheckOperation(aX1, aX2: string;
@@ -39,7 +38,7 @@ procedure TCalculatorOperationViaEtalonTest.CheckOperation(aX1, aX2: string;
 begin
   TLogger.Log(Self, procedure (aLogger: TLogger)
    begin
-    CheckOperation(aLogger, aX1, aX2, anOperation);
+    CheckOperation(aLogger, StrToFloat(aX1), StrToFloat(aX2), anOperation);
    end
   );
 end;
