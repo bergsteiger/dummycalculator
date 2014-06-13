@@ -5,7 +5,8 @@ interface
 uses
   TestFrameWork,
   Calculator,
-  CalculatorOperationViaEtalonBaseTest
+  CalculatorOperationViaEtalonBaseTest,
+  Tests.Logger
   ;
 
  type
@@ -13,6 +14,7 @@ uses
    private
     procedure CheckOperation(aX1, aX2: Double;
                              anOperation : TCalcOperation); overload;
+    procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); override;
    published
     procedure TestDiv;
     procedure TestMul;
@@ -23,7 +25,6 @@ uses
 implementation
 
 uses
-  Tests.Logger,
   SysUtils
   ;
 
@@ -43,24 +44,31 @@ const
  cA = 5;
  cB = 10;
 
+procedure TCalculatorOperationViaEtalonTest.DoOp(aLogger: TLogger; anOperation : TCalcOperation);
+begin
+  CheckOperation(aLogger,
+                 cA,
+                 cB, anOperation);
+end;
+
 procedure TCalculatorOperationViaEtalonTest.TestDiv;
 begin
-  CheckOperation(cA, cB, TCalculator.Divide);
+  DoOp(TCalculator.Divide);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestSub;
 begin
-  CheckOperation(cA, cB, TCalculator.Sub);
+  DoOp(TCalculator.Sub);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestMul;
 begin
-  CheckOperation(cA, cB, TCalculator.Mul);
+  DoOp(TCalculator.Mul);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestAdd;
 begin
-  CheckOperation(cA, cB, TCalculator.Add);
+  DoOp(TCalculator.Add);
 end;
 
 initialization
