@@ -4,7 +4,8 @@ interface
 
 uses
   CalculatorOperationViaEtalonBaseTest,
-  Tests.Logger
+  Tests.Logger,
+  CalculatorOperationViaLogicBaseTest
   ;
 
  type

@@ -10,8 +10,6 @@ uses
   ;
 
  type
-  TCalcOperation = function (const A, B: string): string of object;
-
   TCalculatorOperationViaEtalonBaseTest = class abstract(TCalculatorOperationViaLogicBaseTest)
    private
     procedure DoOpPrim(anOperation : TCalcOperation);
