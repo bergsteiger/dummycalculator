@@ -11,12 +11,13 @@ uses
   TCalcOperation = function (const A, B: string): string of object;
 
   TCalculatorOperationViaEtalonBaseTest = class abstract(TTestCase)
+   private
+    procedure DoOp(anOperation : TCalcOperation); overload;
    protected
     procedure CheckOperation(aLogger: TLogger;
                              aX1, aX2: Double;
                              anOperation : TCalcOperation);
     procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); overload; virtual; abstract;
-    procedure DoOp(anOperation : TCalcOperation); overload;
    published
     procedure TestDiv;
     procedure TestMul;
