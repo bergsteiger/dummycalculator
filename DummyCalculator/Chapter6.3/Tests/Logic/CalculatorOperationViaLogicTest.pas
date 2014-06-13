@@ -26,6 +26,7 @@ uses
 const
  cA = '5';
  cB = '10';
+
 { TCalculatorOperationViaLogicTest }
 
 procedure TCalculatorOperationViaLogicTest.TestDiv;
