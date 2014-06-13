@@ -12,16 +12,11 @@ uses
  type
   TCalculatorOperationViaEtalonBaseTest = class abstract(TCalculatorOperationViaLogicBaseTest)
    protected
-    procedure DoOpPrim(anOp: TOperation; anOperation : TCalcOperation);
+    procedure DoOpPrim(anOp: TOperation; anOperation : TCalcOperation); override;
     procedure CheckOperation(aLogger: TLogger;
                              aX1, aX2: Double;
                              anOperation : TCalcOperation);
     procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); virtual; abstract;
-   published
-    procedure TestDiv; override;
-    procedure TestMul; override;
-    procedure TestAdd; override;
-    procedure TestSub; override;
   end;//TCalculatorOperationViaEtalonBaseTest
 
 implementation
@@ -46,26 +41,6 @@ begin
     DoOp(aLogger, anOperation);
    end
   );
-end;
-
-procedure TCalculatorOperationViaEtalonBaseTest.TestDiv;
-begin
-  DoOpPrim(opDiv, TCalculator.Divide);
-end;
-
-procedure TCalculatorOperationViaEtalonBaseTest.TestSub;
-begin
-  DoOpPrim(opSub, TCalculator.Sub);
-end;
-
-procedure TCalculatorOperationViaEtalonBaseTest.TestMul;
-begin
-  DoOpPrim(opMul, TCalculator.Mul);
-end;
-
-procedure TCalculatorOperationViaEtalonBaseTest.TestAdd;
-begin
-  DoOpPrim(opAdd, TCalculator.Add);
 end;
 
 end.
