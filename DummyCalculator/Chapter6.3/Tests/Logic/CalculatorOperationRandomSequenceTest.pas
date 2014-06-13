@@ -3,8 +3,6 @@ unit CalculatorOperationRandomSequenceTest;
 interface
 
 uses
-  TestFrameWork,
-  Calculator,
   CalculatorOperationViaEtalonBaseTest,
   Tests.Logger
   ;
@@ -18,7 +16,7 @@ uses
 implementation
 
 uses
-  SysUtils
+  TestFrameWork
   ;
 
 { TCalculatorOperationRandomSequenceTest }

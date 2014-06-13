@@ -3,8 +3,6 @@ unit CalculatorOperationViaEtalonTest;
 interface
 
 uses
-  TestFrameWork,
-  Calculator,
   CalculatorOperationViaEtalonBaseTest,
   Tests.Logger
   ;
@@ -18,20 +16,16 @@ uses
 implementation
 
 uses
-  SysUtils
+  TestFrameWork
   ;
 
 { TCalculatorOperationViaEtalonTest }
 
-const
- cA = 5;
- cB = 10;
-
 procedure TCalculatorOperationViaEtalonTest.DoOp(aLogger: TLogger; anOperation : TCalcOperation);
 begin
   CheckOperation(aLogger,
-                 cA,
-                 cB, anOperation);
+                 5,
+                 10, anOperation);
 end;
 
 initialization
