@@ -15,6 +15,7 @@ uses
     procedure CheckOperation(aLogger: TLogger;
                              aX1, aX2: Double;
                              anOperation : TCalcOperation); overload;
+    procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); virtual; abstract;
   end;//TCalculatorOperationViaEtalonBaseTest
 
 implementation
