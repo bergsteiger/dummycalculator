@@ -5,7 +5,8 @@ interface
 uses
   TestFrameWork,
   Calculator,
-  Tests.Logger;
+  Tests.Logger
+  ;
 
  type
   TCalcOperation = function (const A, B: string): string of object;
