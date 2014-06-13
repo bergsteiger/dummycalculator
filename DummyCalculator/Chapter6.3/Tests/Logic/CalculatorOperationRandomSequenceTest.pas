@@ -13,11 +13,6 @@ uses
   TCalculatorOperationRandomSequenceTest = class(TCalculatorOperationViaEtalonBaseTest)
    protected
     procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); override;
-   published
-    procedure TestDiv;
-    procedure TestMul;
-    procedure TestAdd;
-    procedure TestSub;
   end;//TCalculatorOperationRandomSequenceTest
 
 implementation
@@ -37,26 +32,6 @@ begin
     CheckOperation(aLogger,
                    1000 * Random,
                    2000 * Random + 1, anOperation);
-end;
-
-procedure TCalculatorOperationRandomSequenceTest.TestDiv;
-begin
-  DoOp(TCalculator.Divide);
-end;
-
-procedure TCalculatorOperationRandomSequenceTest.TestSub;
-begin
-  DoOp(TCalculator.Sub);
-end;
-
-procedure TCalculatorOperationRandomSequenceTest.TestMul;
-begin
-  DoOp(TCalculator.Mul);
-end;
-
-procedure TCalculatorOperationRandomSequenceTest.TestAdd;
-begin
-  DoOp(TCalculator.Add);
 end;
 
 initialization

@@ -17,6 +17,11 @@ uses
                              anOperation : TCalcOperation);
     procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); overload; virtual; abstract;
     procedure DoOp(anOperation : TCalcOperation); overload;
+   published
+    procedure TestDiv;
+    procedure TestMul;
+    procedure TestAdd;
+    procedure TestSub;
   end;//TCalculatorOperationViaEtalonBaseTest
 
 implementation
@@ -41,6 +46,26 @@ begin
     DoOp(aLogger, anOperation);
    end
   );
+end;
+
+procedure TCalculatorOperationViaEtalonBaseTest.TestDiv;
+begin
+  DoOp(TCalculator.Divide);
+end;
+
+procedure TCalculatorOperationViaEtalonBaseTest.TestSub;
+begin
+  DoOp(TCalculator.Sub);
+end;
+
+procedure TCalculatorOperationViaEtalonBaseTest.TestMul;
+begin
+  DoOp(TCalculator.Mul);
+end;
+
+procedure TCalculatorOperationViaEtalonBaseTest.TestAdd;
+begin
+  DoOp(TCalculator.Add);
 end;
 
 end.
