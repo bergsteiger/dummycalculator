@@ -15,7 +15,8 @@ uses
     procedure CheckOperation(aLogger: TLogger;
                              aX1, aX2: Double;
                              anOperation : TCalcOperation); overload;
-    procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); virtual; abstract;
+    procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); overload; virtual; abstract;
+    procedure DoOp(anOperation : TCalcOperation); overload;
   end;//TCalculatorOperationViaEtalonBaseTest
 
 implementation
@@ -31,6 +32,15 @@ begin
   aLogger.ToLog(aX1);
   aLogger.ToLog(aX2);
   aLogger.ToLog(anOperation(FloatToStr(aX1), FloatToStr(aX2)))
+end;
+
+procedure TCalculatorOperationViaEtalonBaseTest.DoOp(anOperation : TCalcOperation);
+begin
+  TLogger.Log(Self, procedure (aLogger: TLogger)
+   begin
+    DoOp(aLogger, anOperation);
+   end
+  );
 end;
 
 end.

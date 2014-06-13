@@ -52,22 +52,22 @@ end;
 
 procedure TCalculatorOperationRandomSequenceTest.TestDiv;
 begin
-  CheckOperationSeq(TCalculator.Divide);
+  DoOp(TCalculator.Divide);
 end;
 
 procedure TCalculatorOperationRandomSequenceTest.TestSub;
 begin
-  CheckOperationSeq(TCalculator.Sub);
+  DoOp(TCalculator.Sub);
 end;
 
 procedure TCalculatorOperationRandomSequenceTest.TestMul;
 begin
-  CheckOperationSeq(TCalculator.Mul);
+  DoOp(TCalculator.Mul);
 end;
 
 procedure TCalculatorOperationRandomSequenceTest.TestAdd;
 begin
-  CheckOperationSeq(TCalculator.Add);
+  DoOp(TCalculator.Add);
 end;
 
 initialization
