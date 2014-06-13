@@ -4,11 +4,12 @@ interface
 
 uses
   TestFrameWork,
-  Calculator
+  Calculator,
+  CalculatorOperationViaLogicBaseTest
   ;
 
  type
-  TCalculatorOperationViaLogicTest = class(TTestCase)
+  TCalculatorOperationViaLogicTest = class(TCalculatorOperationViaLogicBaseTest)
    published
     procedure TestDiv;
     procedure TestMul;
