@@ -5,7 +5,6 @@ interface
 uses
   TestFrameWork,
   Calculator,
-  Tests.Logger,
   CalculatorOperationViaEtalonBaseTest
   ;
 
@@ -23,6 +22,7 @@ uses
 implementation
 
 uses
+  Tests.Logger,
   SysUtils
   ;
 

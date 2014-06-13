@@ -5,7 +5,6 @@ interface
 uses
   TestFrameWork,
   Calculator,
-  Tests.Logger,
   CalculatorOperationViaEtalonBaseTest
   ;
 
@@ -23,9 +22,10 @@ uses
 
 implementation
 
-  uses
-    SysUtils;
-
+uses
+  Tests.Logger,
+  SysUtils
+  ;
 
 const
  cA = '5';
