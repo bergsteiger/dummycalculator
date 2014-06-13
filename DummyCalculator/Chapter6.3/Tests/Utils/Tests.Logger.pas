@@ -14,7 +14,7 @@ type
   TLogger = class
   public
    type
-    TLoggerProc = reference to procedure (aLogger: TLogger);
+    TLogableAction = reference to procedure (aLogger: TLogger);
   strict private
     FTestFile : TextFile;
     FTestFilePath,
@@ -23,18 +23,13 @@ type
     function TestOutputFolderPath: string;
     function Is2FilesEqual(const aFilePathTest, aFilePathEtalon: string): Boolean;
     function IsExistEtalonFile: Boolean;
-  public
-    class constructor Create;
-    class destructor Destroy;
     procedure OpenTest(aTestCase: TTestCase);
+    function CheckWithEtalon: Boolean;
+  public
     procedure ToLog(const aParametr: string); overload;
     procedure ToLog(const aParametr: Double); overload;
-    function CheckWithEtalon: Boolean;
-    class procedure Log(aTestCase: TTestCase; aProc: TLoggerProc);
+    class procedure Log(aTestCase: TTestCase; aProc: TLogableAction);
   end;//TLogger
-
-var
-  g_Logger : TLogger;
 
 implementation
 
@@ -46,7 +41,7 @@ uses
 
 { TLogger }
 
-class procedure TLogger.Log(aTestCase: TTestCase; aProc: TLoggerProc);
+class procedure TLogger.Log(aTestCase: TTestCase; aProc: TLogableAction);
 var
  l_Logger : TLogger;
 begin
@@ -74,16 +69,6 @@ begin
     Result := Is2FilesEqual(FTestFilePath, FEtalonFilePath)
   else
     Result := CopyFile(PWideChar(FTestFilePath),PWideChar(FEtalonFilePath),True);
-end;
-
-class destructor TLogger.Destroy;
-begin
-  FreeAndNil(g_Logger);
-end;
-
-class constructor TLogger.Create;
-begin
-  g_Logger := TLogger.Create;
 end;
 
 function TLogger.Is2FilesEqual(const aFilePathTest,

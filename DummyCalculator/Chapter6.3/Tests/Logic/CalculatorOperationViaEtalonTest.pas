@@ -12,8 +12,7 @@ uses
 
   TCalculatorOperationViaEtalonTest = class(TTestCase)
    private
-    procedure CheckOperation(aLogger: TLogger;
-                             aX1, aX2: string;
+    procedure CheckOperation(aX1, aX2: string;
                              anOperation : TCalcOperation);
    published
     procedure TestDiv;
@@ -32,15 +31,16 @@ const
  cA = '5';
  cB = '10';
 { TCalculatorOperationViaEtalonTest }
-procedure TCalculatorOperationViaEtalonTest.CheckOperation(aLogger: TLogger;
-                                                           aX1, aX2: string;
+procedure TCalculatorOperationViaEtalonTest.CheckOperation(aX1, aX2: string;
                                                            anOperation : TCalcOperation);
 begin
-  aLogger.OpenTest(Self);
-  aLogger.ToLog(aX1);
-  aLogger.ToLog(aX2);
-  aLogger.ToLog(anOperation(aX1,aX2));
-  CheckTrue(aLogger.CheckWithEtalon);
+  TLogger.Log(Self, procedure (aLogger: TLogger)
+   begin
+    aLogger.ToLog(aX1);
+    aLogger.ToLog(aX2);
+    aLogger.ToLog(anOperation(aX1,aX2))
+   end
+  );
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestDiv;
@@ -50,7 +50,7 @@ begin
   x1:= cA;
   x2:= cB;
 
-  CheckOperation(g_Logger, x1, x2, TCalculator.Divide);
+  CheckOperation(x1, x2, TCalculator.Divide);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestSub;
@@ -60,7 +60,7 @@ begin
   x1:= cA;
   x2:= cB;
 
-  CheckOperation(g_Logger, x1, x2, TCalculator.Sub);
+  CheckOperation(x1, x2, TCalculator.Sub);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestMul;
@@ -70,7 +70,7 @@ begin
   x1:= cA;
   x2:= cB;
 
-  CheckOperation(g_Logger, x1, x2, TCalculator.Mul);
+  CheckOperation(x1, x2, TCalculator.Mul);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestAdd;
@@ -80,7 +80,7 @@ begin
   x1:= cA;
   x2:= cB;
 
-  CheckOperation(g_Logger, x1, x2, TCalculator.Add);
+  CheckOperation(x1, x2, TCalculator.Add);
 end;
 
 initialization
