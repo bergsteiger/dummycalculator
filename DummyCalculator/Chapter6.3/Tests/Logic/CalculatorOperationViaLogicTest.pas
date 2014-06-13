@@ -10,6 +10,8 @@ uses
 
  type
   TCalculatorOperationViaLogicTest = class(TCalculatorOperationViaLogicBaseTest)
+   protected
+    procedure DoOpPrim(anOp: TOperation; anOperation : TCalcOperation); override;
    published
     procedure TestDiv; override;
     procedure TestMul; override;
@@ -29,6 +31,22 @@ const
  cB = '10';
 
 { TCalculatorOperationViaLogicTest }
+
+procedure TCalculatorOperationViaLogicTest.DoOpPrim(anOp: TOperation; anOperation : TCalcOperation);
+begin
+  case anOp of
+   opAdd:
+    CheckTrue(15 = StrToFloat(anOperation(cA, cB)));
+   opSub:
+    CheckTrue(5 = StrToFloat(anOperation(cA, cB)));
+   opMul:
+    CheckTrue(50 = StrToFloat(anOperation(cA, cB)));
+   opDiv:
+    CheckTrue(2 = StrToFloat(anOperation(cA, cB)));
+   else
+    Assert(false, 'Неизвестная операция');
+  end;//case anOp
+end;
 
 procedure TCalculatorOperationViaLogicTest.TestDiv;
 var
