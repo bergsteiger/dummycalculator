@@ -19,8 +19,9 @@ uses
 
 implementation
 
-  uses
-   SysUtils;
+uses
+  SysUtils
+  ;
 
 const
  cA = '5';
