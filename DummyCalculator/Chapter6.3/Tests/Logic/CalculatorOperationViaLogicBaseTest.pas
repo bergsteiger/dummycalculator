@@ -8,6 +8,8 @@ uses
   ;
 
 type
+  TOperation = (opAdd, opMinus, opMul, opDiv);
+
   TCalculatorOperationViaLogicBaseTest = class abstract(TTestCase)
    published
     procedure TestDiv; virtual; abstract;
