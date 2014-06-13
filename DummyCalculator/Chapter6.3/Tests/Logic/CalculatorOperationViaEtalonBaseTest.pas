@@ -14,12 +14,12 @@ uses
 
   TCalculatorOperationViaEtalonBaseTest = class abstract(TCalculatorOperationViaLogicBaseTest)
    private
-    procedure DoOp(anOperation : TCalcOperation); overload;
+    procedure DoOpPrim(anOperation : TCalcOperation);
    protected
     procedure CheckOperation(aLogger: TLogger;
                              aX1, aX2: Double;
                              anOperation : TCalcOperation);
-    procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); overload; virtual; abstract;
+    procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); virtual; abstract;
    published
     procedure TestDiv; override;
     procedure TestMul; override;
@@ -42,7 +42,7 @@ begin
   aLogger.ToLog(anOperation(FloatToStr(aX1), FloatToStr(aX2)))
 end;
 
-procedure TCalculatorOperationViaEtalonBaseTest.DoOp(anOperation : TCalcOperation);
+procedure TCalculatorOperationViaEtalonBaseTest.DoOpPrim(anOperation : TCalcOperation);
 begin
   TLogger.Log(Self, procedure (aLogger: TLogger)
    begin
@@ -53,22 +53,22 @@ end;
 
 procedure TCalculatorOperationViaEtalonBaseTest.TestDiv;
 begin
-  DoOp(TCalculator.Divide);
+  DoOpPrim(TCalculator.Divide);
 end;
 
 procedure TCalculatorOperationViaEtalonBaseTest.TestSub;
 begin
-  DoOp(TCalculator.Sub);
+  DoOpPrim(TCalculator.Sub);
 end;
 
 procedure TCalculatorOperationViaEtalonBaseTest.TestMul;
 begin
-  DoOp(TCalculator.Mul);
+  DoOpPrim(TCalculator.Mul);
 end;
 
 procedure TCalculatorOperationViaEtalonBaseTest.TestAdd;
 begin
-  DoOp(TCalculator.Add);
+  DoOpPrim(TCalculator.Add);
 end;
 
 end.
