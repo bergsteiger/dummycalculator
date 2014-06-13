@@ -11,7 +11,7 @@ uses
  type
   TCalculatorOperationViaEtalonTest = class(TCalculatorOperationViaEtalonBaseTest)
    private
-    procedure CheckOperation(aX1, aX2: string;
+    procedure CheckOperation(aX1, aX2: Double;
                              anOperation : TCalcOperation); overload;
    published
     procedure TestDiv;
@@ -29,58 +29,38 @@ uses
 
 { TCalculatorOperationViaEtalonTest }
 
-procedure TCalculatorOperationViaEtalonTest.CheckOperation(aX1, aX2: string;
+procedure TCalculatorOperationViaEtalonTest.CheckOperation(aX1, aX2: Double;
                                                            anOperation : TCalcOperation);
 begin
   TLogger.Log(Self, procedure (aLogger: TLogger)
    begin
-    CheckOperation(aLogger, StrToFloat(aX1), StrToFloat(aX2), anOperation);
+    CheckOperation(aLogger, aX1, aX2, anOperation);
    end
   );
 end;
 
 const
- cA = '5';
- cB = '10';
+ cA = 5;
+ cB = 10;
 
 procedure TCalculatorOperationViaEtalonTest.TestDiv;
-var
-  x1, x2 : string;
 begin
-  x1:= cA;
-  x2:= cB;
-
-  CheckOperation(x1, x2, TCalculator.Divide);
+  CheckOperation(cA, cB, TCalculator.Divide);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestSub;
-var
-  x1, x2  : string;
 begin
-  x1:= cA;
-  x2:= cB;
-
-  CheckOperation(x1, x2, TCalculator.Sub);
+  CheckOperation(cA, cB, TCalculator.Sub);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestMul;
-var
-  x1, x2  : string;
 begin
-  x1:= cA;
-  x2:= cB;
-
-  CheckOperation(x1, x2, TCalculator.Mul);
+  CheckOperation(cA, cB, TCalculator.Mul);
 end;
 
 procedure TCalculatorOperationViaEtalonTest.TestAdd;
-var
-  x1, x2  : string;
 begin
-  x1:= cA;
-  x2:= cB;
-
-  CheckOperation(x1, x2, TCalculator.Add);
+  CheckOperation(cA, cB, TCalculator.Add);
 end;
 
 initialization
