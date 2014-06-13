@@ -11,10 +11,10 @@ uses
  type
   TCalculatorOperationViaLogicTest = class(TCalculatorOperationViaLogicBaseTest)
    published
-    procedure TestDiv;
-    procedure TestMul;
-    procedure TestAdd;
-    procedure TestSub;
+    procedure TestDiv; override;
+    procedure TestMul; override;
+    procedure TestAdd; override;
+    procedure TestSub; override;
     procedure TestSubError;
   end;//TCalculatorOperationViaLogicTest
 

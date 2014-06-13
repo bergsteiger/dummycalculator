@@ -21,10 +21,10 @@ uses
                              anOperation : TCalcOperation);
     procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); overload; virtual; abstract;
    published
-    procedure TestDiv;
-    procedure TestMul;
-    procedure TestAdd;
-    procedure TestSub;
+    procedure TestDiv; override;
+    procedure TestMul; override;
+    procedure TestAdd; override;
+    procedure TestSub; override;
   end;//TCalculatorOperationViaEtalonBaseTest
 
 implementation
