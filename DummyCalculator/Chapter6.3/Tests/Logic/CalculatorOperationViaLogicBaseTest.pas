@@ -3,7 +3,8 @@ unit CalculatorOperationViaLogicBaseTest;
 interface
 
 uses
-  TestFrameWork
+  TestFrameWork,
+  Calculator
   ;
 
 type
