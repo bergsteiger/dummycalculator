@@ -10,6 +10,7 @@ type
    class function Mul(const A, B: string): string;
    class function Divide(const A, B: string): string;
    class function FloatToStr(aValue: Double): string;
+   class function StrToFloat(aValue: string): Double;
  end;//TCalculator
 
 implementation
@@ -25,6 +26,15 @@ begin
   l_FS := TFormatSettings.Create;
   l_FS.DecimalSeparator := '.';
   Result := SysUtils.FloatToStr(aValue, l_FS);
+end;
+
+class function TCalculator.StrToFloat(aValue: string): Double;
+var
+ l_FS : TFormatSettings;
+begin
+  l_FS := TFormatSettings.Create;
+  l_FS.DecimalSeparator := ',';
+  Result := SysUtils.StrToFloat(aValue, l_FS);
 end;
 
 class function TCalculator.Add(const A, B: string): string;
