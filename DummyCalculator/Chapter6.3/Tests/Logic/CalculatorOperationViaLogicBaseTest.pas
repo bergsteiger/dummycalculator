@@ -15,10 +15,10 @@ type
    protected
     procedure DoOpPrim(anOp: TOperation; anOperation : TCalcOperation); virtual; abstract;
    published
-    procedure TestDiv; virtual;
-    procedure TestMul; virtual;
-    procedure TestAdd; virtual;
-    procedure TestSub; virtual;
+    procedure TestDiv;
+    procedure TestMul;
+    procedure TestAdd;
+    procedure TestSub;
   end;//TCalculatorOperationViaLogicBaseTest
 
 implementation
