@@ -5,16 +5,14 @@ interface
 uses
   TestFrameWork,
   Calculator,
-  Tests.Logger;
+  Tests.Logger,
+  CalculatorOperationViaEtalonBaseTest
+  ;
 
  type
   TCalcOperation = function (const A, B: string): string of object;
 
-  TCalculatorOperationViaEtalonTest = class(TTestCase)
-   protected
-    procedure CheckOperation(aLogger: TLogger;
-                             aX1, aX2: string;
-                             anOperation : TCalcOperation); overload;
+  TCalculatorOperationViaEtalonTest = class(TCalculatorOperationViaEtalonBaseTest)
    private
     procedure CheckOperation(aX1, aX2: string;
                              anOperation : TCalcOperation); overload;
@@ -35,15 +33,6 @@ const
  cA = '5';
  cB = '10';
 { TCalculatorOperationViaEtalonTest }
-
-procedure TCalculatorOperationViaEtalonTest.CheckOperation(aLogger: TLogger;
-                         aX1, aX2: string;
-                         anOperation : TCalcOperation);
-begin
-  aLogger.ToLog(aX1);
-  aLogger.ToLog(aX2);
-  aLogger.ToLog(anOperation(aX1,aX2))
-end;
 
 procedure TCalculatorOperationViaEtalonTest.CheckOperation(aX1, aX2: string;
                                                            anOperation : TCalcOperation);
