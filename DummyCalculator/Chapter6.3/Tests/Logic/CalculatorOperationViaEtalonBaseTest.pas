@@ -14,7 +14,7 @@ uses
    protected
     procedure CheckOperation(aLogger: TLogger;
                              aX1, aX2: Double;
-                             anOperation : TCalcOperation); overload;
+                             anOperation : TCalcOperation);
     procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); overload; virtual; abstract;
     procedure DoOp(anOperation : TCalcOperation); overload;
   end;//TCalculatorOperationViaEtalonBaseTest
