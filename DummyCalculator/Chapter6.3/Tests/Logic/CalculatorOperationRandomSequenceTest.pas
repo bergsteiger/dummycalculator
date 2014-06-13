@@ -11,8 +11,6 @@ uses
 
  type
   TCalculatorOperationRandomSequenceTest = class(TCalculatorOperationViaEtalonBaseTest)
-   private
-    procedure CheckOperationSeq(anOperation : TCalcOperation);
    protected
     procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); override;
    published
@@ -39,15 +37,6 @@ begin
     CheckOperation(aLogger,
                    1000 * Random,
                    2000 * Random + 1, anOperation);
-end;
-
-procedure TCalculatorOperationRandomSequenceTest.CheckOperationSeq(anOperation: TCalcOperation);
-begin
-  TLogger.Log(Self, procedure (aLogger: TLogger)
-   begin
-    DoOp(aLogger, anOperation);
-   end
-  );
 end;
 
 procedure TCalculatorOperationRandomSequenceTest.TestDiv;
