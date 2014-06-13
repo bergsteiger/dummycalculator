@@ -27,10 +27,6 @@ uses
   SysUtils
   ;
 
-const
- cA = '5';
- cB = '10';
-
 { TCalculatorOperationViaEtalonTest }
 
 procedure TCalculatorOperationViaEtalonTest.CheckOperation(aX1, aX2: string;
@@ -42,6 +38,10 @@ begin
    end
   );
 end;
+
+const
+ cA = '5';
+ cB = '10';
 
 procedure TCalculatorOperationViaEtalonTest.TestDiv;
 var
