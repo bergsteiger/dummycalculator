@@ -12,6 +12,9 @@ const
 
 type
   TLogger = class
+  public
+   type
+    TLoggerProc = reference to procedure (aLogger: TLogger);
   strict private
     FTestFile : TextFile;
     FTestFilePath,
@@ -27,6 +30,7 @@ type
     procedure ToLog(const aParametr: string); overload;
     procedure ToLog(const aParametr: Double); overload;
     function CheckWithEtalon: Boolean;
+    class procedure Log(aTestCase: TTestCase; aProc: TLoggerProc);
   end;//TLogger
 
 var
@@ -41,6 +45,23 @@ uses
   Winapi.Windows;
 
 { TLogger }
+
+class procedure TLogger.Log(aTestCase: TTestCase; aProc: TLoggerProc);
+var
+ l_Logger : TLogger;
+begin
+ l_Logger := TLogger.Create;
+ try
+  l_Logger.OpenTest(aTestCase);
+  try
+   aProc(l_Logger);
+  finally
+   aTestCase.Check(l_Logger.CheckWithEtalon, 'Выходной фай не совпал с эталоном');
+  end;//try..finally
+ finally
+  FreeAndNil(l_Logger);
+ end;//try..finally
+end;
 
 function TLogger.CheckWithEtalon: Boolean;
 begin
