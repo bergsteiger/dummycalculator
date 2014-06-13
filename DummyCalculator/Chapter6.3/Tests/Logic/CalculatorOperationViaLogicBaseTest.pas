@@ -8,7 +8,7 @@ uses
   ;
 
 type
-  TOperation = (opAdd, opMinus, opMul, opDiv);
+  TOperation = (opAdd, opSub, opMul, opDiv);
   TCalcOperation = function (const A, B: string): string of object;
 
   TCalculatorOperationViaLogicBaseTest = class abstract(TTestCase)

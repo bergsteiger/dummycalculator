@@ -11,9 +11,8 @@ uses
 
  type
   TCalculatorOperationViaEtalonBaseTest = class abstract(TCalculatorOperationViaLogicBaseTest)
-   private
-    procedure DoOpPrim(anOperation : TCalcOperation);
    protected
+    procedure DoOpPrim(anOp: TOperation; anOperation : TCalcOperation);
     procedure CheckOperation(aLogger: TLogger;
                              aX1, aX2: Double;
                              anOperation : TCalcOperation);
@@ -40,7 +39,7 @@ begin
   aLogger.ToLog(anOperation(FloatToStr(aX1), FloatToStr(aX2)))
 end;
 
-procedure TCalculatorOperationViaEtalonBaseTest.DoOpPrim(anOperation : TCalcOperation);
+procedure TCalculatorOperationViaEtalonBaseTest.DoOpPrim(anOp: TOperation; anOperation : TCalcOperation);
 begin
   TLogger.Log(Self, procedure (aLogger: TLogger)
    begin
@@ -51,22 +50,22 @@ end;
 
 procedure TCalculatorOperationViaEtalonBaseTest.TestDiv;
 begin
-  DoOpPrim(TCalculator.Divide);
+  DoOpPrim(opDiv, TCalculator.Divide);
 end;
 
 procedure TCalculatorOperationViaEtalonBaseTest.TestSub;
 begin
-  DoOpPrim(TCalculator.Sub);
+  DoOpPrim(opSub, TCalculator.Sub);
 end;
 
 procedure TCalculatorOperationViaEtalonBaseTest.TestMul;
 begin
-  DoOpPrim(TCalculator.Mul);
+  DoOpPrim(opMul, TCalculator.Mul);
 end;
 
 procedure TCalculatorOperationViaEtalonBaseTest.TestAdd;
 begin
-  DoOpPrim(TCalculator.Add);
+  DoOpPrim(opAdd, TCalculator.Add);
 end;
 
 end.
