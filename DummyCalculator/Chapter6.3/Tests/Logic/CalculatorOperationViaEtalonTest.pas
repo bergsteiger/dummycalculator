@@ -12,8 +12,6 @@ uses
  type
   TCalculatorOperationViaEtalonTest = class(TCalculatorOperationViaEtalonBaseTest)
    private
-    procedure CheckOperation(aX1, aX2: Double;
-                             anOperation : TCalcOperation); overload;
     procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); override;
    published
     procedure TestDiv;
@@ -29,16 +27,6 @@ uses
   ;
 
 { TCalculatorOperationViaEtalonTest }
-
-procedure TCalculatorOperationViaEtalonTest.CheckOperation(aX1, aX2: Double;
-                                                           anOperation : TCalcOperation);
-begin
-  TLogger.Log(Self, procedure (aLogger: TLogger)
-   begin
-    CheckOperation(aLogger, aX1, aX2, anOperation);
-   end
-  );
-end;
 
 const
  cA = 5;
