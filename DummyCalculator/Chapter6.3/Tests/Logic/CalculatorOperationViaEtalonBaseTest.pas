@@ -31,7 +31,7 @@ procedure TCalculatorOperationViaEtalonBaseTest.CheckOperation(aLogger: TLogger;
 begin
   aLogger.ToLog(aX1);
   aLogger.ToLog(aX2);
-  aLogger.ToLog(anOperation(FloatToStr(aX1), FloatToStr(aX2)))
+  aLogger.ToLog(anOperation(TCalculator.FloatToStr(aX1), TCalculator.FloatToStr(aX2)))
 end;
 
 procedure TCalculatorOperationViaEtalonBaseTest.DoOpPrim(anOp: TOperation; anOperation : TCalcOperation);

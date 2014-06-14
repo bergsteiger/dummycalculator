@@ -33,7 +33,7 @@ var
  l_FS : TFormatSettings;
 begin
   l_FS := TFormatSettings.Create;
-  l_FS.DecimalSeparator := ',';
+  l_FS.DecimalSeparator := '.';
   Result := SysUtils.StrToFloat(aValue, l_FS);
 end;
 

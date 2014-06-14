@@ -38,7 +38,7 @@ begin
    opMul:
     CheckTrue(50 = StrToFloat(anOperation(cA, cB)));
    opDiv:
-    CheckTrue(2 = TCalculator.StrToFloat(anOperation(cA, cB)));
+    CheckTrue(0.5 = TCalculator.StrToFloat(anOperation(cA, cB)));
    else
     Assert(false, 'Неизвестная операция');
   end;//case anOp
