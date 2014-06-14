@@ -16,7 +16,8 @@ implementation
 
 uses
   TestFrameWork,
-  SysUtils
+  SysUtils,
+  CalculatorOperationViaLogicBaseTest
   ;
 
 function TMulTest.GetOp: TOperation;

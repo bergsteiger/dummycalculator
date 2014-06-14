@@ -16,12 +16,13 @@ implementation
 
 uses
   TestFrameWork,
-  SysUtils
+  SysUtils,
+  CalculatorOperationViaLogicBaseTest
   ;
 
 function TMinusTest.GetOp: TOperation;
 begin
- Result := opMinus;
+ Result := opSub;
 end;
 
 initialization

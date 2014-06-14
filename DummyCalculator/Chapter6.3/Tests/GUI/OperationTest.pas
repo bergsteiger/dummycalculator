@@ -4,12 +4,12 @@ interface
 
 uses
   CalculatorGUITest,
-  MainForm
+  MainForm,
+  CalculatorOperationViaLogicBaseTest
   ;
 
 type
-  TOperation = (opAdd, opMinus, opMul, opDiv);
-
+  TOperation = CalculatorOperationViaLogicBaseTest.TOperation;
   TOperationTest = class(TCalculatorGUITest)
    protected
     procedure VisitForm(aForm: TfmMain); override;
@@ -50,7 +50,7 @@ begin
    aForm.Button1.Click;
    Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA + aB));
   end;
-  opMinus:
+  opSub:
   begin
    aForm.Button2.Click;
    Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA - aB));
@@ -65,6 +65,8 @@ begin
    aForm.Button4.Click;
    Check((aForm.Edit3.Text) = TCalculator.FloatToStr(aA / aB));
   end;
+  else
+   Assert(false, 'Неизвестная операция');
  end;//case GetOp
 end;
 
