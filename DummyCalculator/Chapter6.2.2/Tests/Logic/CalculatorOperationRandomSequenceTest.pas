@@ -12,6 +12,7 @@ uses
   TCalculatorOperationRandomSequenceTest = class(TCalculatorOperationViaEtalonBaseTest)
    protected
     procedure DoOp(aLogger: TLogger; const anOperation : TCalcOperation); override;
+    procedure ProprocessParams(var theX1, theX2 : Double); virtual;
   end;//TCalculatorOperationRandomSequenceTest
 
 implementation
@@ -21,6 +22,10 @@ uses
   ;
 
 { TCalculatorOperationRandomSequenceTest }
+
+procedure TCalculatorOperationRandomSequenceTest.ProprocessParams(var theX1, theX2 : Double);
+begin
+end;
 
 procedure TCalculatorOperationRandomSequenceTest.DoOp(aLogger: TLogger; const anOperation : TCalcOperation);
 var
@@ -32,6 +37,7 @@ begin
   begin
     l_x1 := 1000 * Random;
     l_x2 := 2000 * Random;
+    ProprocessParams(l_x1, l_x2);
     CheckOperation(aLogger,
                    l_x1,
                    l_x2, anOperation);
