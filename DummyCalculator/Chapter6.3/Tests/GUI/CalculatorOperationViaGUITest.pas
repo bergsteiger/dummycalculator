@@ -36,13 +36,9 @@ begin
 end;
 
 procedure TCalculatorOperationViaGUITest.VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TOperation);
-var
- aA, aB : Single;
 begin
- aA := GetFirstParam;
- aB := GetSecondParam;
- aForm.Edit1.Text := FloatToStr(aA);
- aForm.Edit2.Text := FloatToStr(aB);
+ aForm.Edit1.Text := FloatToStr(GetFirstParam);
+ aForm.Edit2.Text := FloatToStr(GetSecondParam);
  aLogger.ToLog(aForm.Edit1.Text);
  aLogger.ToLog(aForm.Edit2.Text);
  case anOperation of
