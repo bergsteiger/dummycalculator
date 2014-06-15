@@ -111,8 +111,7 @@ class function TCalculator.ModInt(const A, B: string): string;
 var
   x1, x2, x3 : Integer;
 begin
- Assert(false, 'Не реализовано');
-(*  x1 := Round(StrToFloat(A));
+  x1 := Round(StrToFloat(A));
   x2 := Round(StrToFloat(B));
   try
    x3 := x1 mod x2;
@@ -123,7 +122,7 @@ begin
     Exit;
    end;//on EDivByZero
   end;//try..except
-  Result := FloatToStr(x3);*)
+  Result := FloatToStr(x3);
 end;
 
 end.
