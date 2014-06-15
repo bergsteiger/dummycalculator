@@ -13,7 +13,8 @@ uses
   CalculatorOperationRandomSequenceTest in 'Tests\Logic\CalculatorOperationRandomSequenceTest.pas',
   CalculatorOperationViaEtalonBaseTest in 'Tests\Logic\CalculatorOperationViaEtalonBaseTest.pas',
   CalculatorOperationViaLogicBaseTest in 'Tests\Logic\CalculatorOperationViaLogicBaseTest.pas',
-  CalculatorOperationZeroDivideTest in 'Tests\Logic\CalculatorOperationZeroDivideTest.pas';
+  CalculatorOperationZeroDivideTest in 'Tests\Logic\CalculatorOperationZeroDivideTest.pas',
+  CalculatorOperationRandomSequenceWithZeroTest in 'Tests\Logic\CalculatorOperationRandomSequenceWithZeroTest.pas';
 
 {$R *.res}
 begin
