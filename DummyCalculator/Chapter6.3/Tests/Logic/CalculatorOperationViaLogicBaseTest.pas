@@ -23,7 +23,7 @@ type
    private
     procedure DoOpPrim(anOperation: TCalcOperation);
    protected
-    procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); virtual; abstract;
+    procedure DoOp(aLogger: TLogger; const anOperation : TCalcOperation); virtual; abstract;
    published
     procedure TestDiv;
     procedure TestMul;
