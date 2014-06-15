@@ -31,7 +31,7 @@ begin
   for l_Index := 0 to 10000 do
   begin
     l_x1 := 1000 * Random;
-    l_x2 := 2000 * Random + 1;
+    l_x2 := 2000 * Random;
     CheckOperation(aLogger,
                    l_x1,
                    l_x2, anOperation);
