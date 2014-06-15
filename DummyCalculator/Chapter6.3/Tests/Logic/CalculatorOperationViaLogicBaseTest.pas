@@ -13,12 +13,10 @@ type
   TCalcOperationProc = function (const A, B: string): string of object;
 
   TCalcOperation = record
-   private
-    f_Proc : TCalcOperationProc;
    public
     rCode : TCalcOperationCode;
     function rProc : TCalcOperationProc;
-    constructor Create(aCode: TCalcOperationCode; aProc: TCalcOperationProc);
+    constructor Create(aCode: TCalcOperationCode);
   end;//TCalcOperation
 
   TCalculatorOperationViaLogicBaseTest = class abstract(TTestCase)
@@ -35,10 +33,9 @@ type
 
 implementation
 
-constructor TCalcOperation.Create(aCode: TCalcOperationCode; aProc: TCalcOperationProc);
+constructor TCalcOperation.Create(aCode: TCalcOperationCode);
 begin
   rCode := aCode;
-  f_Proc := aProc;
 end;
 
 function TCalcOperation.rProc : TCalcOperationProc;
@@ -55,27 +52,26 @@ begin
    else
     Assert(false, 'Неизвестная операция');
  end;//case rCode
- Result := f_Proc;
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestDiv;
 begin
-  DoOpPrim(TCalcOperation.Create(opDiv, TCalculator.Divide));
+  DoOpPrim(TCalcOperation.Create(opDiv));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestSub;
 begin
-  DoOpPrim(TCalcOperation.Create(opSub, TCalculator.Sub));
+  DoOpPrim(TCalcOperation.Create(opSub));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestMul;
 begin
-  DoOpPrim(TCalcOperation.Create(opMul, TCalculator.Mul));
+  DoOpPrim(TCalcOperation.Create(opMul));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestAdd;
 begin
-  DoOpPrim(TCalcOperation.Create(opAdd, TCalculator.Add));
+  DoOpPrim(TCalcOperation.Create(opAdd));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.DoOpPrim(anOperation : TCalcOperation);
