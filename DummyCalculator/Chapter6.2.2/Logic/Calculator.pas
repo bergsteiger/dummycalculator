@@ -74,7 +74,15 @@ var
 begin
   x1 := StrToFloat(A);
   x2 := StrToFloat(B);
-  x3 := x1 / x2;
+  try
+   x3 := x1 / x2;
+  except
+   on EZeroDivide do
+   begin
+    Result := 'Деление на 0';
+    Exit;
+   end;//on EZeroDivide
+  end;//try..except
   Result := FloatToStr(x3);
 end;
 
