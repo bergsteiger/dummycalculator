@@ -89,18 +89,14 @@
         </DCCReference>
         <DCCReference Include="Tests\FirstTest.pas"/>
         <DCCReference Include="Tests\GUI\CalculatorGUITest.pas"/>
-        <DCCReference Include="Tests\GUI\PlusTest.pas"/>
         <DCCReference Include="Tests\GUI\OperationTest.pas"/>
-        <DCCReference Include="Tests\GUI\MinusTest.pas"/>
-        <DCCReference Include="Tests\GUI\MulTest.pas"/>
-        <DCCReference Include="Tests\GUI\DivTest.pas"/>
-        <DCCReference Include="Tests\GUI\RandomPlusTest.pas"/>
         <DCCReference Include="Logic\Calculator.pas"/>
         <DCCReference Include="Tests\Logic\CalculatorOperationViaEtalonTest.pas"/>
         <DCCReference Include="Tests\Utils\Tests.Logger.pas"/>
         <DCCReference Include="Tests\Logic\CalculatorOperationViaLogicTest.pas"/>
         <DCCReference Include="Tests\Logic\CalculatorOperationRandomSequenceTest.pas"/>
         <DCCReference Include="Tests\Logic\CalculatorOperationViaEtalonBaseTest.pas"/>
+        <DCCReference Include="Tests\Logic\CalculatorOperationViaLogicBaseTest.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
