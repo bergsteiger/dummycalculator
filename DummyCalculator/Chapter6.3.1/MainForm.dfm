@@ -95,5 +95,6 @@ object fmMain: TfmMain
     Height = 25
     Caption = 'Mod'
     TabOrder = 8
+    OnClick = Button6Click
   end
 end
