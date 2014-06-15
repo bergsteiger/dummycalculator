@@ -29,7 +29,12 @@ procedure TCalculatorOperationViaEtalonBaseTest.CheckOperation(aLogger: TLogger;
 begin
   aLogger.ToLog(aX1);
   aLogger.ToLog(aX2);
-  aLogger.ToLog(anOperation.rProc(TCalculator.FloatToStr(aX1), TCalculator.FloatToStr(aX2)))
+  try
+   aLogger.ToLog(anOperation.rProc()(TCalculator.FloatToStr(aX1), TCalculator.FloatToStr(aX2)))
+  except
+   on E: Exception do
+    aLogger.ToLog(E.ClassName);
+  end;//try..except
 end;
 
 end.

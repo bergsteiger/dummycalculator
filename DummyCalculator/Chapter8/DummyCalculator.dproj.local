@@ -6,11 +6,11 @@
     <Transaction>1899.12.30 00:00:00.000.806,=H:\Dropbox\lulinproject\DummyCalculator\Chapter6.3\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.216,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.755,H:\Dropbox\lulinproject\DummyCalculator\Chapter6.3\Unit1.pas=H:\Dropbox\lulinproject\DummyCalculator\Chapter6.3\Tests\Logic\CalculatorOperationViaLogicBaseTest.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.517,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.913,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaEtalonTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTestEtalon.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.170,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Tests\FirstTest.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.661,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\Tests.Logger.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\BaseClasses.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.460,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\FirstTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\CalculatorGUITest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.913,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaEtalonTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTestEtalon.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.517,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.661,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\Tests.Logger.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\BaseClasses.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.170,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Tests\FirstTest.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.388,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Unit1.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Tests\OperationTest.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.934,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter5\Tests\Logic\CalculatorOperationTest.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.021,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaLogicTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas</Transaction>

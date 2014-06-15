@@ -10,7 +10,7 @@ uses
 
  type
   TCalculatorOperationViaEtalonTest = class(TCalculatorOperationViaEtalonBaseTest)
-   private
+   protected
     procedure DoOp(aLogger: TLogger; const anOperation : TCalcOperation); override;
   end;//TCalculatorOperationViaEtalonTest
 

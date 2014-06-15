@@ -12,7 +12,9 @@ uses
   Tests.Logger in 'Tests\Utils\Tests.Logger.pas',
   CalculatorOperationRandomSequenceTest in 'Tests\Logic\CalculatorOperationRandomSequenceTest.pas',
   CalculatorOperationViaEtalonBaseTest in 'Tests\Logic\CalculatorOperationViaEtalonBaseTest.pas',
-  CalculatorOperationViaLogicBaseTest in 'Tests\Logic\CalculatorOperationViaLogicBaseTest.pas';
+  CalculatorOperationViaLogicBaseTest in 'Tests\Logic\CalculatorOperationViaLogicBaseTest.pas',
+  CalculatorOperationZeroDivideTest in 'Tests\Logic\CalculatorOperationZeroDivideTest.pas',
+  CalculatorOperationRandomSequenceWithZeroTest in 'Tests\Logic\CalculatorOperationRandomSequenceWithZeroTest.pas';
 
 {$R *.res}
 begin

@@ -9,7 +9,7 @@ uses
   ;
 
 type
-  TCalcOperationCode = (opAdd, opSub, opMul, opDiv);
+  TCalcOperationCode = (opAdd, opSub, opMul, opDiv, opDivInt);
   TCalcOperationProc = function (const A, B: string): string of object;
 
   TCalcOperation = record
@@ -29,6 +29,7 @@ type
     procedure TestMul;
     procedure TestAdd;
     procedure TestSub;
+    procedure TestDivInt;
   end;//TCalculatorOperationViaLogicBaseTest
 
 implementation
@@ -49,6 +50,8 @@ begin
     Result := TCalculator.Mul;
    opDiv:
     Result := TCalculator.Divide;
+   opDivInt:
+    Result := TCalculator.DivInt;
    else
     Assert(false, 'Неизвестная операция');
  end;//case rCode
@@ -72,6 +75,11 @@ end;
 procedure TCalculatorOperationViaLogicBaseTest.TestAdd;
 begin
   DoOpPrim(TCalcOperation.Create(opAdd));
+end;
+
+procedure TCalculatorOperationViaLogicBaseTest.TestDivInt;
+begin
+  DoOpPrim(TCalcOperation.Create(opDivInt));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.DoOpPrim(anOperation : TCalcOperation);

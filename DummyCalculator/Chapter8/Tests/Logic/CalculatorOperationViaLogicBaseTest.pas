@@ -9,14 +9,14 @@ uses
   ;
 
 type
-  TCalcOperationCode = (opAdd, opSub, opMul, opDiv);
+  TCalcOperationCode = (opAdd, opSub, opMul, opDiv, opDivInt);
   TCalcOperationProc = function (const A, B: string): string of object;
 
   TCalcOperation = record
    public
     rCode : TCalcOperationCode;
-    rProc : TCalcOperationProc;
-    constructor Create(aCode: TCalcOperationCode; aProc: TCalcOperationProc);
+    function rProc : TCalcOperationProc;
+    constructor Create(aCode: TCalcOperationCode);
   end;//TCalcOperation
 
   TCalculatorOperationViaLogicBaseTest = class abstract(TTestCase)
@@ -29,34 +29,57 @@ type
     procedure TestMul;
     procedure TestAdd;
     procedure TestSub;
+    procedure TestDivInt;
   end;//TCalculatorOperationViaLogicBaseTest
 
 implementation
 
-constructor TCalcOperation.Create(aCode: TCalcOperationCode; aProc: TCalcOperationProc);
+constructor TCalcOperation.Create(aCode: TCalcOperationCode);
 begin
   rCode := aCode;
-  rProc := aProc;
+end;
+
+function TCalcOperation.rProc : TCalcOperationProc;
+begin
+ case rCode of
+   opAdd:
+    Result := TCalculator.Add;
+   opSub:
+    Result := TCalculator.Sub;
+   opMul:
+    Result := TCalculator.Mul;
+   opDiv:
+    Result := TCalculator.Divide;
+   opDivInt:
+    Result := TCalculator.DivInt;
+   else
+    Assert(false, 'Неизвестная операция');
+ end;//case rCode
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestDiv;
 begin
-  DoOpPrim(TCalcOperation.Create(opDiv, TCalculator.Divide));
+  DoOpPrim(TCalcOperation.Create(opDiv));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestSub;
 begin
-  DoOpPrim(TCalcOperation.Create(opSub, TCalculator.Sub));
+  DoOpPrim(TCalcOperation.Create(opSub));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestMul;
 begin
-  DoOpPrim(TCalcOperation.Create(opMul, TCalculator.Mul));
+  DoOpPrim(TCalcOperation.Create(opMul));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestAdd;
 begin
-  DoOpPrim(TCalcOperation.Create(opAdd, TCalculator.Add));
+  DoOpPrim(TCalcOperation.Create(opAdd));
+end;
+
+procedure TCalculatorOperationViaLogicBaseTest.TestDivInt;
+begin
+  DoOpPrim(TCalcOperation.Create(opDivInt));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.DoOpPrim(anOperation : TCalcOperation);
