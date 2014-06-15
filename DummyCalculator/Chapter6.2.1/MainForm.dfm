@@ -89,5 +89,6 @@ object fmMain: TfmMain
     Height = 25
     Caption = 'DivInt'
     TabOrder = 7
+    OnClick = Button5Click
   end
 end
