@@ -50,6 +50,8 @@ begin
     Result := TCalculator.Mul;
    opDiv:
     Result := TCalculator.Divide;
+   opDivInt:
+    Result := TCalculator.DivInt;
    else
     Assert(false, 'Неизвестная операция');
  end;//case rCode
