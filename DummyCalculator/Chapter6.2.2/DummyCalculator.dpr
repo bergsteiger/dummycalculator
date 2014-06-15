@@ -14,7 +14,8 @@ uses
   CalculatorOperationViaEtalonBaseTest in 'Tests\Logic\CalculatorOperationViaEtalonBaseTest.pas',
   CalculatorOperationViaLogicBaseTest in 'Tests\Logic\CalculatorOperationViaLogicBaseTest.pas',
   CalculatorOperationZeroDivideTest in 'Tests\Logic\CalculatorOperationZeroDivideTest.pas',
-  CalculatorOperationRandomSequenceWithZeroTest in 'Tests\Logic\CalculatorOperationRandomSequenceWithZeroTest.pas';
+  CalculatorOperationRandomSequenceWithZeroTest in 'Tests\Logic\CalculatorOperationRandomSequenceWithZeroTest.pas',
+  CalculatorOperationViaGUIWithZeroTest in 'Tests\GUI\CalculatorOperationViaGUIWithZeroTest.pas';
 
 {$R *.res}
 begin
