@@ -1,4 +1,4 @@
-unit OperationTest;
+unit CalculatorOperationViaGUITest;
 
 interface
 
@@ -10,12 +10,12 @@ uses
   ;
 
 type
-  TOperationViaGUITest = class(TCalculatorGUITest)
+  TCalculatorOperationViaGUITest = class(TCalculatorGUITest)
    protected
     procedure VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TOperation); override;
     function  GetFirstParam: Single; virtual;
     function  GetSecondParam: Single; virtual;
-  end;//TOperationTest
+  end;//TCalculatorOperationViaGUITest
 
 implementation
 
@@ -25,17 +25,17 @@ uses
   SysUtils
   ;
 
-function TOperationViaGUITest.GetFirstParam: Single;
+function TCalculatorOperationViaGUITest.GetFirstParam: Single;
 begin
  Result := 10;
 end;
 
-function TOperationViaGUITest.GetSecondParam: Single;
+function TCalculatorOperationViaGUITest.GetSecondParam: Single;
 begin
  Result := 20;
 end;
 
-procedure TOperationViaGUITest.VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TOperation);
+procedure TCalculatorOperationViaGUITest.VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TOperation);
 var
  aA, aB : Single;
 begin
@@ -61,5 +61,5 @@ begin
 end;
 
 initialization
- TestFramework.RegisterTest(TOperationViaGUITest.Suite);
+ TestFramework.RegisterTest(TCalculatorOperationViaGUITest.Suite);
  end.

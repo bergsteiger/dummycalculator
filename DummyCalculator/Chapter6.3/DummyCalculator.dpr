@@ -6,7 +6,7 @@ uses
   GUITestRunner,
   FirstTest in 'Tests\FirstTest.pas',
   CalculatorGUITest in 'Tests\GUI\CalculatorGUITest.pas',
-  OperationTest in 'Tests\GUI\OperationTest.pas',
+  CalculatorOperationViaGUITest in 'Tests\GUI\CalculatorOperationViaGUITest.pas',
   Calculator in 'Logic\Calculator.pas',
   CalculatorOperationViaEtalonTest in 'Tests\Logic\CalculatorOperationViaEtalonTest.pas',
   Tests.Logger in 'Tests\Utils\Tests.Logger.pas',
