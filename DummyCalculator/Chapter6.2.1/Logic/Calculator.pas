@@ -9,6 +9,7 @@ type
    class function Sub(const A, B: string): string;
    class function Mul(const A, B: string): string;
    class function Divide(const A, B: string): string;
+   class function DivInt(const A, B: string): string;
    class function FloatToStr(aValue: Double): string;
    class function StrToFloat(aValue: string): Double;
  end;//TCalculator
@@ -74,6 +75,16 @@ begin
   x1 := StrToFloat(A);
   x2 := StrToFloat(B);
   x3 := x1 / x2;
+  Result := FloatToStr(x3);
+end;
+
+class function TCalculator.DivInt(const A, B: string): string;
+var
+  x1, x2, x3 : Integer;
+begin
+  x1 := Round(StrToFloat(A));
+  x2 := Round(StrToFloat(B));
+  x3 := x1 div x2;
   Result := FloatToStr(x3);
 end;
 
