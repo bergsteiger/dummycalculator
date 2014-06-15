@@ -13,8 +13,8 @@ uses
 type
   TCalculatorGUITest = class abstract(TCalculatorOperationViaEtalonBaseTest)
    protected
-     procedure VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TOperation); virtual; abstract;
-     procedure DoOp(aLogger: TLogger; anOp: TOperation; anOperation : TCalcOperation); override;
+     procedure VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TCalcOperationCode); virtual; abstract;
+     procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); override;
   end;//TCalculatorGUITest
 
 implementation
@@ -23,14 +23,14 @@ uses
   Forms
   ;
 
-procedure TCalculatorGUITest.DoOp(aLogger: TLogger; anOp: TOperation; anOperation : TCalcOperation);
+procedure TCalculatorGUITest.DoOp(aLogger: TLogger; anOperation : TCalcOperation);
 var
  l_Index : Integer;
 begin
  for l_Index := 0 to Screen.FormCount do
   if (Screen.Forms[l_Index] Is TfmMain) then
   begin
-   VisitForm(Screen.Forms[l_Index] As TfmMain, aLogger, anOp);
+   VisitForm(Screen.Forms[l_Index] As TfmMain, aLogger, anOperation.rCode);
    break;
   end;//Screen.Forms[l_Index] Is TfmMain
 end;

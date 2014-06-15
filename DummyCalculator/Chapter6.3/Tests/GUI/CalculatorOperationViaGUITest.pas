@@ -12,7 +12,7 @@ uses
 type
   TCalculatorOperationViaGUITest = class(TCalculatorGUITest)
    protected
-    procedure VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TOperation); override;
+    procedure VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TCalcOperationCode); override;
     function  GetFirstParam: Single; virtual;
     function  GetSecondParam: Single; virtual;
   end;//TCalculatorOperationViaGUITest
@@ -35,7 +35,7 @@ begin
  Result := 20;
 end;
 
-procedure TCalculatorOperationViaGUITest.VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TOperation);
+procedure TCalculatorOperationViaGUITest.VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TCalcOperationCode);
 begin
  aForm.Edit1.Text := FloatToStr(GetFirstParam);
  aForm.Edit2.Text := FloatToStr(GetSecondParam);

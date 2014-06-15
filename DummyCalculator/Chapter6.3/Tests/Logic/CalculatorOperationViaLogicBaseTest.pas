@@ -4,16 +4,26 @@ interface
 
 uses
   TestFrameWork,
-  Calculator
+  Calculator,
+  Tests.Logger
   ;
 
 type
-  TOperation = (opAdd, opSub, opMul, opDiv);
-  TCalcOperation = function (const A, B: string): string of object;
+  TCalcOperationCode = (opAdd, opSub, opMul, opDiv);
+  TCalcOperationProc = function (const A, B: string): string of object;
+
+  TCalcOperation = record
+   public
+    rCode : TCalcOperationCode;
+    rProc : TCalcOperationProc;
+    constructor Create(aCode: TCalcOperationCode; aProc: TCalcOperationProc);
+  end;//TCalcOperation
 
   TCalculatorOperationViaLogicBaseTest = class abstract(TTestCase)
+   private
+    procedure DoOpPrim(anOperation: TCalcOperation);
    protected
-    procedure DoOpPrim(anOp: TOperation; anOperation : TCalcOperation); virtual; abstract;
+    procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); virtual; abstract;
    published
     procedure TestDiv;
     procedure TestMul;
@@ -23,24 +33,39 @@ type
 
 implementation
 
+constructor TCalcOperation.Create(aCode: TCalcOperationCode; aProc: TCalcOperationProc);
+begin
+  rCode := aCode;
+  rProc := aProc;
+end;
+
 procedure TCalculatorOperationViaLogicBaseTest.TestDiv;
 begin
-  DoOpPrim(opDiv, TCalculator.Divide);
+  DoOpPrim(TCalcOperation.Create(opDiv, TCalculator.Divide));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestSub;
 begin
-  DoOpPrim(opSub, TCalculator.Sub);
+  DoOpPrim(TCalcOperation.Create(opSub, TCalculator.Sub));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestMul;
 begin
-  DoOpPrim(opMul, TCalculator.Mul);
+  DoOpPrim(TCalcOperation.Create(opMul, TCalculator.Mul));
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestAdd;
 begin
-  DoOpPrim(opAdd, TCalculator.Add);
+  DoOpPrim(TCalcOperation.Create(opAdd, TCalculator.Add));
+end;
+
+procedure TCalculatorOperationViaLogicBaseTest.DoOpPrim(anOperation : TCalcOperation);
+begin
+  TLogger.Log(Self, procedure (aLogger: TLogger)
+   begin
+    DoOp(aLogger, anOperation);
+   end
+  );
 end;
 
 end.

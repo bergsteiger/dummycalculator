@@ -11,7 +11,7 @@ uses
  type
   TCalculatorOperationRandomSequenceTest = class(TCalculatorOperationViaEtalonBaseTest)
    protected
-    procedure DoOp(aLogger: TLogger; anOp: TOperation; anOperation : TCalcOperation); override;
+    procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); override;
   end;//TCalculatorOperationRandomSequenceTest
 
 implementation
@@ -22,7 +22,7 @@ uses
 
 { TCalculatorOperationRandomSequenceTest }
 
-procedure TCalculatorOperationRandomSequenceTest.DoOp(aLogger: TLogger; anOp: TOperation; anOperation : TCalcOperation);
+procedure TCalculatorOperationRandomSequenceTest.DoOp(aLogger: TLogger; anOperation : TCalcOperation);
 var
  l_Index : Integer;
 begin
