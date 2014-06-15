@@ -1,4 +1,4 @@
-unit CalculatorOperationViaEtalonTest;
+unit CalculatorOperationZeroDivideTest;
 
 interface
 
@@ -9,10 +9,10 @@ uses
   ;
 
  type
-  TCalculatorOperationViaEtalonTest = class(TCalculatorOperationViaEtalonBaseTest)
+  TCalculatorOperationZeroDivideTest = class(TCalculatorOperationViaEtalonBaseTest)
    protected
     procedure DoOp(aLogger: TLogger; const anOperation : TCalcOperation); override;
-  end;//TCalculatorOperationViaEtalonTest
+  end;//TCalculatorOperationZeroDivideTest
 
 implementation
 
@@ -22,13 +22,13 @@ uses
 
 { TCalculatorOperationViaEtalonTest }
 
-procedure TCalculatorOperationViaEtalonTest.DoOp(aLogger: TLogger; const anOperation : TCalcOperation);
+procedure TCalculatorOperationZeroDivideTest.DoOp(aLogger: TLogger; const anOperation : TCalcOperation);
 begin
   CheckOperation(aLogger,
                  5,
-                 10, anOperation);
+                 0, anOperation);
 end;
 
 initialization
- TestFramework.RegisterTest(TCalculatorOperationViaEtalonTest.Suite);
+ TestFramework.RegisterTest(TCalculatorOperationZeroDivideTest.Suite);
 end.
