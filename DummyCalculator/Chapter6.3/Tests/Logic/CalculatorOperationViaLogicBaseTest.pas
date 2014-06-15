@@ -43,6 +43,18 @@ end;
 
 function TCalcOperation.rProc : TCalcOperationProc;
 begin
+ case rCode of
+   opAdd:
+    Result := TCalculator.Add;
+   opSub:
+    Result := TCalculator.Sub;
+   opMul:
+    Result := TCalculator.Mul;
+   opDiv:
+    Result := TCalculator.Divide;
+   else
+    Assert(false, 'Неизвестная операция');
+ end;//case rCode
  Result := f_Proc;
 end;
 
