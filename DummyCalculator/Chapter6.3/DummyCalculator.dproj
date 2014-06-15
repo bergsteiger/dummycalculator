@@ -93,7 +93,6 @@
         <DCCReference Include="Logic\Calculator.pas"/>
         <DCCReference Include="Tests\Logic\CalculatorOperationViaEtalonTest.pas"/>
         <DCCReference Include="Tests\Utils\Tests.Logger.pas"/>
-        <DCCReference Include="Tests\Logic\CalculatorOperationViaLogicTest.pas"/>
         <DCCReference Include="Tests\Logic\CalculatorOperationRandomSequenceTest.pas"/>
         <DCCReference Include="Tests\Logic\CalculatorOperationViaEtalonBaseTest.pas"/>
         <DCCReference Include="Tests\Logic\CalculatorOperationViaLogicBaseTest.pas"/>
