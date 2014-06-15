@@ -53,6 +53,8 @@ begin
     Result := TCalculator.Divide;
    opDivInt:
     Result := TCalculator.DivInt;
+   opModInt:
+    Result := TCalculator.ModInt;
    else
     Assert(false, 'Неизвестная операция');
  end;//case rCode
