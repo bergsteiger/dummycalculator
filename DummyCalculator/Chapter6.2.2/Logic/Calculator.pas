@@ -92,7 +92,15 @@ var
 begin
   x1 := Round(StrToFloat(A));
   x2 := Round(StrToFloat(B));
-  x3 := x1 div x2;
+  try
+   x3 := x1 div x2;
+  except
+   on EDivByZero do
+   begin
+    Result := 'Деление на 0';
+    Exit;
+   end;//on EDivByZero
+  end;//try..except
   Result := FloatToStr(x3);
 end;
 
