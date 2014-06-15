@@ -11,7 +11,7 @@ uses
  type
   TCalculatorOperationViaEtalonTest = class(TCalculatorOperationViaEtalonBaseTest)
    private
-    procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); override;
+    procedure DoOp(aLogger: TLogger; anOp: TOperation; anOperation : TCalcOperation); override;
   end;//TCalculatorOperationViaEtalonTest
 
 implementation
@@ -22,7 +22,7 @@ uses
 
 { TCalculatorOperationViaEtalonTest }
 
-procedure TCalculatorOperationViaEtalonTest.DoOp(aLogger: TLogger; anOperation : TCalcOperation);
+procedure TCalculatorOperationViaEtalonTest.DoOp(aLogger: TLogger; anOp: TOperation; anOperation : TCalcOperation);
 begin
   CheckOperation(aLogger,
                  5,
