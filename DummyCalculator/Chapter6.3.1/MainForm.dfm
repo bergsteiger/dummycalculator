@@ -2,7 +2,7 @@ object fmMain: TfmMain
   Left = 0
   Top = 0
   Caption = 'fmMain'
-  ClientHeight = 149
+  ClientHeight = 166
   ClientWidth = 236
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -13,7 +13,7 @@ object fmMain: TfmMain
   OldCreateOrder = False
   DesignSize = (
     236
-    149)
+    166)
   PixelsPerInch = 96
   TextHeight = 13
   object Edit1: TEdit
@@ -24,7 +24,6 @@ object fmMain: TfmMain
     Anchors = [akLeft, akTop, akRight]
     TabOrder = 0
     Text = '1'
-    ExplicitWidth = 185
   end
   object Edit2: TEdit
     Left = 24
@@ -34,17 +33,15 @@ object fmMain: TfmMain
     Anchors = [akLeft, akTop, akRight]
     TabOrder = 1
     Text = '2'
-    ExplicitWidth = 185
   end
   object Edit3: TEdit
     Left = 24
-    Top = 101
+    Top = 137
     Width = 189
     Height = 21
     Anchors = [akLeft, akTop, akRight]
     TabOrder = 2
     Text = '<result>'
-    ExplicitWidth = 185
   end
   object Button1: TButton
     Left = 24
@@ -83,12 +80,20 @@ object fmMain: TfmMain
     OnClick = Button4Click
   end
   object Button5: TButton
-    Left = 180
-    Top = 70
+    Left = 24
+    Top = 101
     Width = 35
     Height = 25
-    Caption = 'DivInt'
+    Caption = 'Div'
     TabOrder = 7
     OnClick = Button5Click
+  end
+  object Button6: TButton
+    Left = 63
+    Top = 101
+    Width = 35
+    Height = 25
+    Caption = 'Mod'
+    TabOrder = 8
   end
 end
