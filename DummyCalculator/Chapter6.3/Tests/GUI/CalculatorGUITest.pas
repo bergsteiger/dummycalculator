@@ -14,7 +14,7 @@ type
   TCalculatorGUITest = class abstract(TCalculatorOperationViaEtalonBaseTest)
    protected
      procedure VisitForm(aForm: TfmMain; aLogger: TLogger; anOperation : TCalcOperationCode); virtual; abstract;
-     procedure DoOp(aLogger: TLogger; anOperation : TCalcOperation); override;
+     procedure DoOp(aLogger: TLogger; const anOperation : TCalcOperation); override;
   end;//TCalculatorGUITest
 
 implementation
@@ -23,7 +23,7 @@ uses
   Forms
   ;
 
-procedure TCalculatorGUITest.DoOp(aLogger: TLogger; anOperation : TCalcOperation);
+procedure TCalculatorGUITest.DoOp(aLogger: TLogger; const anOperation : TCalcOperation);
 var
  l_Index : Integer;
 begin
