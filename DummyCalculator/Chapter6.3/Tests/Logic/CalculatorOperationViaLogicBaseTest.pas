@@ -13,9 +13,11 @@ type
   TCalcOperationProc = function (const A, B: string): string of object;
 
   TCalcOperation = record
+   private
+    f_Proc : TCalcOperationProc;
    public
     rCode : TCalcOperationCode;
-    rProc : TCalcOperationProc;
+    function rProc : TCalcOperationProc;
     constructor Create(aCode: TCalcOperationCode; aProc: TCalcOperationProc);
   end;//TCalcOperation
 
@@ -36,7 +38,12 @@ implementation
 constructor TCalcOperation.Create(aCode: TCalcOperationCode; aProc: TCalcOperationProc);
 begin
   rCode := aCode;
-  rProc := aProc;
+  f_Proc := aProc;
+end;
+
+function TCalcOperation.rProc : TCalcOperationProc;
+begin
+ Result := f_Proc;
 end;
 
 procedure TCalculatorOperationViaLogicBaseTest.TestDiv;
