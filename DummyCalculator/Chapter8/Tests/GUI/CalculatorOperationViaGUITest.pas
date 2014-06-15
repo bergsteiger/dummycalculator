@@ -52,6 +52,8 @@ begin
    aForm.Button4.Click;
   opDivInt:
    aForm.Button5.Click;
+  opModInt:
+   aForm.Button6.Click;
   else
    Assert(false, 'Неизвестная операция');
  end;//case GetOp
