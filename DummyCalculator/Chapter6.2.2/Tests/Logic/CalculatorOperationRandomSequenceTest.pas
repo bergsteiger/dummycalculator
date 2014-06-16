@@ -42,10 +42,9 @@ begin
   for l_Index := 0 to 10000 do
     CheckOperation(aLogger,
                    1000 * Random,
-                   2000 * Random + 1, anOperation);
+                   2000 * Random, anOperation);
   CheckTrue(aLogger.CheckWithEtalon);
 end;
-
 
 procedure TCalculatorOperationRandomSequenceTest.CheckOperation(
   aLogger: TLogger;
