@@ -2,6 +2,9 @@ unit Calculator;
 
 interface
 
+const
+  c_ZeroDivideMessageError = 'Деление на 0';
+
 type
  TCalculator = class
   public
@@ -64,6 +67,11 @@ var
 begin
   x1 := StrToFloat(A);
   x2 := StrToFloat(B);
+  if x2=0 then
+  begin
+    Result := c_ZeroDivideMessageError;
+    exit;
+  end;
   x3 := x1 / x2;
   Result := FloatToStr(x3);
 end;
