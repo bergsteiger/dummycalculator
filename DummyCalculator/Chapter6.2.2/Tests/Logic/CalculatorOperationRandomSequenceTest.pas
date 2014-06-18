@@ -36,13 +36,20 @@ procedure TCalculatorOperationRandomSequenceTest.CheckOperationSeq(
   anOperation: TCalcOperation);
 var
   l_Index : Integer;
+  x1, x2 : single;
 begin
   RandSeed := 40000;
   aLogger.OpenTest(Self);
   for l_Index := 0 to 10000 do
+  begin
+    x1 := 1000 * Random;
+    x2 := 2000 * Random;
+    if (l_Index mod 100) = 0 then
+      x2 := 0;
     CheckOperation(aLogger,
-                   1000 * Random,
-                   2000 * Random, anOperation);
+                   x1,
+                   x2, anOperation);
+  end;
   CheckTrue(aLogger.CheckWithEtalon);
 end;
 

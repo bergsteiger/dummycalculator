@@ -67,10 +67,14 @@ var
 begin
   x1 := StrToFloat(A);
   x2 := StrToFloat(B);
-  if x2=0 then
-  begin
-    Result := c_ZeroDivideMessageError;
-    exit;
+  try
+    x3 := x1 / x2;
+  except
+    on EDivByZero do
+    begin
+      Result:= c_ZeroDivideMessageError;
+      Exit;
+    end;
   end;
   x3 := x1 / x2;
   Result := FloatToStr(x3);
