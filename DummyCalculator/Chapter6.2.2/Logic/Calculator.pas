@@ -82,7 +82,15 @@ var
 begin
   x1 := round(StrToFloat(A));
   x2 := round(StrToFloat(B));
-  x3 := x1 div x2;
+  try
+    x3 := x1 div x2;
+  except
+    on EDivByZero do
+    begin
+      Result:= c_ZeroDivideMessageError;
+      Exit;
+    end;
+  end;
   Result := FloatToStr(x3);
 end;
 

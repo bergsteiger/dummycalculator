@@ -16,7 +16,8 @@ uses
     procedure TestSub;
     procedure TestSubError;
     procedure TestDivInt;
-    procedure TestZeroDivide;
+    procedure TestZeroDiv;
+    procedure TestZeroDivInt;
   end;//TCalculatorOperationViaLogicTest
 
 implementation
@@ -65,13 +66,22 @@ begin
   CheckFalse(7 = StrToFloat(TCalculator.Sub(x2, x1)));
 end;
 
-procedure TCalculatorOperationViaLogicTest.TestZeroDivide;
+procedure TCalculatorOperationViaLogicTest.TestZeroDiv;
 var
   x1, x2: string;
 begin
   x1:= cA;
   x2:= '0';
   CheckTrue(c_ZeroDivideMessageError = TCalculator.Divide(x1, x2));
+end;
+
+procedure TCalculatorOperationViaLogicTest.TestZeroDivInt;
+var
+  x1, x2: string;
+begin
+  x1:= cA;
+  x2:= '0';
+  CheckTrue(c_ZeroDivideMessageError = TCalculator.DivInt(x1, x2));
 end;
 
 procedure TCalculatorOperationViaLogicTest.TestMul;
