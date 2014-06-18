@@ -56,7 +56,8 @@ begin
   try
     aLogger.ToLog(anOperation(FloatToStr(aX1),FloatToStr(aX2)));
   except
-    aLogger.ToLog(Exception.ClassName);
+    on E : Exception do
+      aLogger.ToLog(E.ClassName);
   end;
 end;
 
