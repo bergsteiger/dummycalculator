@@ -57,15 +57,22 @@ procedure TCalculatorOperationRandomSequenceTest.CheckOperation(
   aLogger: TLogger;
   aX1, aX2: Double;
   anOperation : TCalcOperation);
+var
+  l_ExceptionCount: integer;
 begin
   aLogger.ToLog(aX1);
   aLogger.ToLog(aX2);
+  l_ExceptionCount:= 0;
   try
     aLogger.ToLog(anOperation(FloatToStr(aX1),FloatToStr(aX2)));
   except
     on E : Exception do
+    begin
       aLogger.ToLog(E.ClassName);
+      inc(l_ExceptionCount);
+    end;
   end;
+  Check(l_ExceptionCount = 0);
 end;
 
 procedure TCalculatorOperationRandomSequenceTest.TestDiv;
