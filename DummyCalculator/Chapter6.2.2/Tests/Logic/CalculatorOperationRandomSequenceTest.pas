@@ -53,7 +53,11 @@ procedure TCalculatorOperationRandomSequenceTest.CheckOperation(
 begin
   aLogger.ToLog(aX1);
   aLogger.ToLog(aX2);
-  aLogger.ToLog(anOperation(FloatToStr(aX1),FloatToStr(aX2)));
+  try
+    aLogger.ToLog(anOperation(FloatToStr(aX1),FloatToStr(aX2)));
+  except
+    aLogger.ToLog(Exception.ClassName);
+  end;
 end;
 
 procedure TCalculatorOperationRandomSequenceTest.TestDiv;
