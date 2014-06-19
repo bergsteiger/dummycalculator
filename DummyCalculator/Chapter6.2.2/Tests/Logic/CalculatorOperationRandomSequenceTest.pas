@@ -35,44 +35,43 @@ procedure TCalculatorOperationRandomSequenceTest.CheckOperationSeq(
   aLogger: TLogger;
   anOperation: TCalcOperation);
 var
-  l_Index : Integer;
+  l_Index, l_ExceptionCount : Integer;
   x1, x2 : single;
 begin
   RandSeed := 40000;
   aLogger.OpenTest(Self);
+
+  l_ExceptionCount:= 0;
   for l_Index := 0 to 10000 do
   begin
-    x1 := 1000 * Random;
-    x2 := 2000 * Random;
-    if (l_Index mod 100) = 0 then
-      x2 := 0;
-    CheckOperation(aLogger,
-                   x1,
-                   x2, anOperation);
-  end;
+    try
+      x1 := 1000 * Random;
+      x2 := 2000 * Random;
+      if (l_Index mod 100) = 0 then
+        x2 := 0;
+      CheckOperation(aLogger,
+                     x1,
+                     x2, anOperation);
+      except
+        on E : Exception do
+        begin
+          aLogger.ToLog(E.ClassName);
+          inc(l_ExceptionCount);
+        end;
+    end;
+    end;
   CheckTrue(aLogger.CheckWithEtalon);
+  Check(l_ExceptionCount = 0);
 end;
 
 procedure TCalculatorOperationRandomSequenceTest.CheckOperation(
   aLogger: TLogger;
   aX1, aX2: Double;
   anOperation : TCalcOperation);
-var
-  l_ExceptionCount: integer;
 begin
   aLogger.ToLog(aX1);
   aLogger.ToLog(aX2);
-  l_ExceptionCount:= 0;
-  try
-    aLogger.ToLog(anOperation(FloatToStr(aX1),FloatToStr(aX2)));
-  except
-    on E : Exception do
-    begin
-      aLogger.ToLog(E.ClassName);
-      inc(l_ExceptionCount);
-    end;
-  end;
-  Check(l_ExceptionCount = 0);
+  aLogger.ToLog(anOperation(FloatToStr(aX1),FloatToStr(aX2)));
 end;
 
 procedure TCalculatorOperationRandomSequenceTest.TestDiv;
