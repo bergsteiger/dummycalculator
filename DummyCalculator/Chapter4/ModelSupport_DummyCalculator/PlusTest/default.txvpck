@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="xja1s3k3p4t_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:DummyCalculator:PlusTest.TPlusTest">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:DummyCalculator:PlusTest.TPlusTest.GetOp()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DummyCalculator:PlusTest.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>
