@@ -95,6 +95,24 @@
         <DCCReference Include="Tests\GUI\DivTest.pas"/>
         <DCCReference Include="Tests\GUI\RandomPlusTest.pas"/>
         <DCCReference Include="Logic\Calculator.pas"/>
+        <None Include="ModelSupport_DummyCalculator\default.txaPackage"/>
+        <None Include="ModelSupport_DummyCalculator\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\CalculatorGUITest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\MulTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\MinusTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\Calculator\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\OperationTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\RandomPlusTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\PlusTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\MainForm\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\DivTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\FirstTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\DummyCalculator\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\MulTest\default.txaPackage"/>
+        <None Include="ModelSupport_DummyCalculator\PlusTest\default.txaPackage"/>
+        <None Include="ModelSupport_DummyCalculator\RandomPlusTest\default.txaPackage"/>
+        <None Include="ModelSupport_DummyCalculator\MinusTest\default.txaPackage"/>
+        <None Include="ModelSupport_DummyCalculator\FirstTest\default.txaPackage"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -171,6 +189,7 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
+            <ModelSupport>True</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.951,=D:\work\Lulin\BackUp\Chapter6.2.2\ModelSupport_DummyCalculator\DivIntTest\default.txaPackage</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.769,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.077,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Unit1.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Logic\Calculator.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.216,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.625,D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Tests\GUI\RandomTests\RandomDivTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.597,=D:\work\Lulin\BackUp\Chapter6.2.2\ModelSupport_DummyCalculator\DivIntTest\default.txvpck</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.517,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.939,=D:\work\Lulin\BackUp\Chapter6.2.2\ModelSupport_DummyCalculator\DivIntTest\default.txvpck</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,d:\work\lulin\backup\chapter6.2.2\modelsupport_dummycalculator\divinttest\default.txvpck=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.611,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\PlusTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.002,D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Tests\GUI\RandomTests\RandomMinusTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.964,=D:\work\Lulin\BackUp\Chapter6.2.2\ModelSupport_DummyCalculator\DivIntTest\default_diagram.tvsconfig</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.170,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Tests\FirstTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.601,d:\work\lulin\backup\chapter6.2.2\tests\gui\divinttest.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.012,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2.1\Unit1.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2.1\Tests\GUI\DivIntTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.666,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2.1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.007,=D:\work\Lulin\BackUp\Chapter6.2.2\tests\gui\divinttest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.892,D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Tests\GUI\RandomTests\RandomMulTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.460,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\CalculatorGUITest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\FirstTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.509,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.315,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.233,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.388,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Tests\OperationTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.496,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.576,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\Tests\Logic\CalculatorOperationRandomSequenceTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.913,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTestEtalon.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaEtalonTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.985,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.934,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter5\Tests\Logic\CalculatorOperationTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.021,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaLogicTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.983,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.661,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\BaseClasses.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\Tests.Logger.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.240,D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Tests\GUI\RandomTests\RandomPlusTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Tests\GUI\RandomPlusTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.961,D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Tests\GUI\RandomTests\RandomDivIntTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.911,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\BaseClasses.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.891,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTestEtalon.pas</Transaction>
+    <Transaction>2014.06.25 07:55:39.472,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\ModelSupport_DummyCalculator\RandomDivIntTest\default.txvpck</Transaction>
+    <Transaction>2014.06.25 07:55:40.576,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\ModelSupport_DummyCalculator\RandomMulTest\default.txvpck</Transaction>
+    <Transaction>2014.06.25 07:55:40.656,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\ModelSupport_DummyCalculator\RandomDivTest\default.txvpck</Transaction>
+    <Transaction>2014.06.25 07:55:40.877,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter7\ModelSupport_DummyCalculator\RandomMinusTest\default.txvpck</Transaction>
+  </Transactions>
+</BorlandProject>
