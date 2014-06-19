@@ -70,7 +70,7 @@ begin
   try
     x3 := x1 / x2;
   except
-    on EDivByZero do
+    on EZeroDivide do
     begin
       Result:= c_ZeroDivideMessageError;
       Exit;
