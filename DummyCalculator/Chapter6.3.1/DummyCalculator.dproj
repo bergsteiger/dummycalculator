@@ -99,6 +99,22 @@
         <DCCReference Include="Tests\Logic\CalculatorOperationZeroDivideTest.pas"/>
         <DCCReference Include="Tests\Logic\CalculatorOperationRandomSequenceWithZeroTest.pas"/>
         <DCCReference Include="Tests\GUI\CalculatorOperationViaGUIWithZeroTest.pas"/>
+        <None Include="ModelSupport_DummyCalculator\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\CalculatorGUITest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\Tests\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\DummyCalculator\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\CalculatorOperationViaLogicBaseTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\CalculatorOperationZeroDivideTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\Calculator\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\CalculatorOperationRandomSequenceWithZeroTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\CalculatorOperationViaGUITest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\FirstTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\Tests\Logger\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\CalculatorOperationViaGUIWithZeroTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\CalculatorOperationViaEtalonBaseTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\CalculatorOperationViaEtalonTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\MainForm\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\CalculatorOperationRandomSequenceTest\default.txvpck"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -175,6 +191,7 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
+            <ModelSupport>True</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>
