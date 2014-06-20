@@ -17,7 +17,7 @@ uses
   Tests.Logger in 'Tests\Utils\Tests.Logger.pas',
   CalculatorOperationViaLogicTest in 'Tests\Logic\CalculatorOperationViaLogicTest.pas',
   CalculatorOperationRandomSequenceTest in 'Tests\Logic\CalculatorOperationRandomSequenceTest.pas',
-  DivIntTest in 'Tests\GUI\DivIntTest.pas';
+  divinttest in 'tests\gui\divinttest.pas';
 
 {$R *.res}
 begin

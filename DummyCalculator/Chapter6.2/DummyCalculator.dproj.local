@@ -1,22 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.216,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.170,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Tests\FirstTest.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.388,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Unit1.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Tests\OperationTest.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.983,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.913,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaEtalonTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTestEtalon.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.460,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\FirstTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\CalculatorGUITest.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.517,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.661,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\Tests.Logger.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\BaseClasses.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.611,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\PlusTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.661,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\BaseClasses.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\Tests.Logger.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.911,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\MiscUtils\BaseClasses.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.891,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTestEtalon.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.934,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter5\Tests\Logic\CalculatorOperationTest.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.611,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Unit1.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\PlusTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.460,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\CalculatorGUITest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Tests\FirstTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.077,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Unit1.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Logic\Calculator.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.216,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.517,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.769,=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter2\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.576,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\Tests\Logic\CalculatorOperationRandomSequenceTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.170,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Tests\FirstTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.913,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTestEtalon.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaEtalonTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.934,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter5\Tests\Logic\CalculatorOperationTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.388,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Tests\OperationTest.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter3\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.233,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.077,B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Logic\Calculator.pas=B:\DraftsAndScketches\SomeTestProjects\DummyCalculator\Chapter4\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.021,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaLogicTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas</Transaction>
-    <Transaction>2014.05.29 16:55:02.576,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\Tests\Logic\CalculatorOperationRandomSequenceTest.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.891,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTestEtalon.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.021,D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationTest.pas=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6\Tests\Logic\CalculatorOperationViaLogicTest.pas</Transaction>
+    <Transaction>2014.06.20 03:25:22.226,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\default.txaPackage</Transaction>
+    <Transaction>2014.06.20 03:25:25.320,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.304,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\MulTest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.402,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\CalculatorOperationRandomSequenceTest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.483,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\OperationTest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.545,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\CalculatorGUITest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.608,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\PlusTest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.685,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\Calculator\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.702,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\DummyCalculator\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.760,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\RandomPlusTest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.810,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\CalculatorOperationViaEtalonTest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.874,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\MinusTest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:29.968,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\DivTest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:30.031,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\FirstTest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:30.054,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\Tests\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:30.125,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\MainForm\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:30.204,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\CalculatorOperationViaLogicTest\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:30.427,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\Tests\Logger\default.txvpck</Transaction>
+    <Transaction>2014.06.20 03:25:43.528,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\OperationTest\default.txaPackage</Transaction>
+    <Transaction>2014.06.20 03:27:07.735,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\CalculatorOperationViaEtalonTest\default.txaPackage</Transaction>
+    <Transaction>2014.06.20 03:27:07.748,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\CalculatorOperationRandomSequenceTest\default.txaPackage</Transaction>
+    <Transaction>2014.06.20 03:31:32.813,=D:\work\Lulin\BitBucket\DummyCalculator\Chapter6.2\ModelSupport_DummyCalculator\Calculator\default.txaPackage</Transaction>
   </Transactions>
 </BorlandProject>
