@@ -139,7 +139,7 @@
     </reference>
     <reference referencedUin="delphi:e_class:lib:DelphiWin32:TestFramework.TTestCase">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="40,120,287,190" />
+      <property name="bounds" value="316,-60,287,190" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_field:lib:DelphiWin32:TestFramework.TTestCase.fMethod" />
       <reference referencedUin="delphi:e_method:lib:DelphiWin32:TestFramework.TTestCase.Invoke(TestFramework.TTestCase.TTestMethod)" />
@@ -151,11 +151,11 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:CalculatorGUITest.TCalculatorGUITest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="400,120,238,99" />
+      <property name="bounds" value="340,200,238,99" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:CalculatorGUITest.TCalculatorGUITest:TestFramework.TTestCase">
-        <property name="sourceAnchor" value="400,169" />
-        <property name="targetAnchor" value="327,169" />
+        <property name="sourceAnchor" value="459,200" />
+        <property name="targetAnchor" value="459,130" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:e_method:src:DummyCalculator:CalculatorGUITest.TCalculatorGUITest.VisitForm(MainForm.TfmMain)" />
@@ -163,12 +163,14 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:CalculatorOperationRandomSequenceTest.TCalculatorOperationRandomSequenceTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="-80,380,517,174" />
+      <property name="bounds" value="-300,317,540,174" />
       <property name="location_set_by_user" value="True" />
+      <property name="bounds_setted_by_user" value="True" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:CalculatorOperationRandomSequenceTest.TCalculatorOperationRandomSequenceTest:TestFramework.TTestCase">
-        <property name="sourceAnchor" value="183,380" />
-        <property name="targetAnchor" value="183,310" />
+        <property name="sourceAnchor" value="85,317" />
+        <property name="targetAnchor" value="333,130" />
         <property name="bendpoints" value="" />
+        <property name="bounds_setted_by_user" value="True" />
       </reference>
       <reference referencedUin="delphi:e_method:src:DummyCalculator:CalculatorOperationRandomSequenceTest.TCalculatorOperationRandomSequenceTest.CheckOperation(Tests.Logger.TLogger,System.Double,System.Double,CalculatorOperationRandomSequenceTest.TCalcOperation)" />
       <reference referencedUin="delphi:e_method:src:DummyCalculator:CalculatorOperationRandomSequenceTest.TCalculatorOperationRandomSequenceTest.CheckOperationSeq(Tests.Logger.TLogger,CalculatorOperationRandomSequenceTest.TCalcOperation)" />
@@ -180,11 +182,11 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:CalculatorOperationViaLogicTest.TCalculatorOperationViaLogicTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="-520,180,404,189" />
+      <property name="bounds" value="-300,-60,404,189" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:CalculatorOperationViaLogicTest.TCalculatorOperationViaLogicTest:TestFramework.TTestCase">
-        <property name="sourceAnchor" value="-116,245" />
-        <property name="targetAnchor" value="40,245" />
+        <property name="sourceAnchor" value="104,34" />
+        <property name="targetAnchor" value="316,34" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:e_method:src:DummyCalculator:CalculatorOperationViaLogicTest.TCalculatorOperationViaLogicTest.TestDiv()" />
@@ -198,17 +200,18 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:DivIntTest.TDivIntTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="1000,-60,142,84" />
+      <property name="bounds" value="620,540,142,84" />
+      <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_method:src:DummyCalculator:DivIntTest.TDivIntTest.GetOp()" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:DivIntTest.TDivIntTest:OperationTest.TOperationTest">
-        <property name="sourceAnchor" value="1004,24" />
-        <property name="targetAnchor" value="909,83" />
+        <property name="sourceAnchor" value="636,540" />
+        <property name="targetAnchor" value="543,469" />
         <property name="bendpoints" value="" />
       </reference>
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:CalculatorOperationViaEtalonTest.TCalculatorOperationViaEtalonTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="-520,-40,416,159" />
+      <property name="bounds" value="-300,140,416,159" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_method:src:DummyCalculator:CalculatorOperationViaEtalonTest.TCalculatorOperationViaEtalonTest.CheckOperation(Tests.Logger.TLogger,System.string,System.string,CalculatorOperationViaEtalonTest.TCalcOperation)" />
       <reference referencedUin="delphi:e_method:src:DummyCalculator:CalculatorOperationViaEtalonTest.TCalculatorOperationViaEtalonTest.TestDiv()" />
@@ -217,49 +220,51 @@
       <reference referencedUin="delphi:e_method:src:DummyCalculator:CalculatorOperationViaEtalonTest.TCalculatorOperationViaEtalonTest.TestSub()" />
       <reference referencedUin="delphi:e_method:src:DummyCalculator:CalculatorOperationViaEtalonTest.TCalculatorOperationViaEtalonTest.TestDivInt()" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:CalculatorOperationViaEtalonTest.TCalculatorOperationViaEtalonTest:TestFramework.TTestCase">
-        <property name="sourceAnchor" value="-104,112" />
-        <property name="targetAnchor" value="40,163" />
+        <property name="sourceAnchor" value="116,149" />
+        <property name="targetAnchor" value="316,82" />
         <property name="bendpoints" value="" />
       </reference>
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:PlusTest.TPlusTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="1020,120,126,84" />
+      <property name="bounds" value="600,362,126,84" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_method:src:DummyCalculator:PlusTest.TPlusTest.GetOp()" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:PlusTest.TPlusTest:OperationTest.TOperationTest">
-        <property name="sourceAnchor" value="1020,162" />
-        <property name="targetAnchor" value="909,162" />
+        <property name="sourceAnchor" value="600,404" />
+        <property name="targetAnchor" value="554,404" />
         <property name="bendpoints" value="" />
       </reference>
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:MulTest.TMulTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="840,-60,118,84" />
+      <property name="bounds" value="460,540,118,84" />
+      <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_method:src:DummyCalculator:MulTest.TMulTest.GetOp()" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:MulTest.TMulTest:OperationTest.TOperationTest">
-        <property name="sourceAnchor" value="874,24" />
-        <property name="targetAnchor" value="874,80" />
+        <property name="sourceAnchor" value="507,540" />
+        <property name="targetAnchor" value="507,469" />
         <property name="bendpoints" value="" />
       </reference>
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:MinusTest.TMinusTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="660,-60,144,84" />
+      <property name="bounds" value="280,540,144,84" />
+      <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_method:src:DummyCalculator:MinusTest.TMinusTest.GetOp()" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:MinusTest.TMinusTest:OperationTest.TOperationTest">
-        <property name="sourceAnchor" value="762,24" />
-        <property name="targetAnchor" value="762,80" />
+        <property name="sourceAnchor" value="394,540" />
+        <property name="targetAnchor" value="394,469" />
         <property name="bendpoints" value="" />
       </reference>
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:FirstTest.TFirstTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="120,-60,127,84" />
+      <property name="bounds" value="680,0,127,84" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:FirstTest.TFirstTest:TestFramework.TTestCase">
-        <property name="sourceAnchor" value="183,24" />
-        <property name="targetAnchor" value="183,120" />
+        <property name="sourceAnchor" value="680,42" />
+        <property name="targetAnchor" value="603,42" />
         <property name="bendpoints" value="" />
         <property name="bounds_setted_by_user" value="True" />
       </reference>
@@ -267,20 +272,22 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:DivTest.TDivTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="500,-60,118,84" />
+      <property name="bounds" value="120,540,118,84" />
+      <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_method:src:DummyCalculator:DivTest.TDivTest.GetOp()" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:DivTest.TDivTest:OperationTest.TOperationTest">
-        <property name="sourceAnchor" value="618,19" />
-        <property name="targetAnchor" value="720,83" />
+        <property name="sourceAnchor" value="238,543" />
+        <property name="targetAnchor" value="365,463" />
         <property name="bendpoints" value="" />
       </reference>
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:OperationTest.TOperationTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="720,80,189,129" />
+      <property name="bounds" value="365,340,189,129" />
+      <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:OperationTest.TOperationTest:CalculatorGUITest.TCalculatorGUITest">
-        <property name="sourceAnchor" value="720,164" />
-        <property name="targetAnchor" value="638,164" />
+        <property name="sourceAnchor" value="459,340" />
+        <property name="targetAnchor" value="459,299" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:e_method:src:DummyCalculator:OperationTest.TOperationTest.VisitForm(MainForm.TfmMain)" />
@@ -290,11 +297,11 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:DummyCalculator:RandomPlusTest.TRandomPlusTest">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="920,280,222,99" />
+      <property name="bounds" value="760,355,222,99" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:RandomPlusTest.TRandomPlusTest:PlusTest.TPlusTest">
-        <property name="sourceAnchor" value="1081,280" />
-        <property name="targetAnchor" value="1081,204" />
+        <property name="sourceAnchor" value="760,404" />
+        <property name="targetAnchor" value="726,404" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:e_method:src:DummyCalculator:RandomPlusTest.TRandomPlusTest.GetFirstParam()" />
