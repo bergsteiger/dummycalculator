@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.CalculatorOperationViaLogicBaseTest" Type="System.String" Value="CalculatorOperationViaLogicBaseTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.CalculatorOperationZeroDivideTest" Type="System.String" Value="CalculatorOperationZeroDivideTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Calculator" Type="System.String" Value="Calculator" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.CalculatorGUITest" Type="System.String" Value="CalculatorGUITest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.CalculatorOperationRandomSequenceWithZeroTest" Type="System.String" Value="CalculatorOperationRandomSequenceWithZeroTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.CalculatorOperationViaGUITest" Type="System.String" Value="CalculatorOperationViaGUITest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.FirstTest" Type="System.String" Value="FirstTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Tests" Type="System.String" Value="Tests" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.DummyCalculator" Type="System.String" Value="DummyCalculator" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.CalculatorOperationViaGUIWithZeroTest" Type="System.String" Value="CalculatorOperationViaGUIWithZeroTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.CalculatorOperationViaEtalonBaseTest" Type="System.String" Value="CalculatorOperationViaEtalonBaseTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.CalculatorOperationViaEtalonTest" Type="System.String" Value="CalculatorOperationViaEtalonTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.MainForm" Type="System.String" Value="MainForm" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.CalculatorOperationRandomSequenceTest" Type="System.String" Value="CalculatorOperationRandomSequenceTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Tests.Logger" Type="System.String" Value="Tests\Logger" Category="General" IsBrowsable="False" />
+</TgConfig>
