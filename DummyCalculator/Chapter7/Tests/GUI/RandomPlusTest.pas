@@ -31,6 +31,6 @@ begin
 end;
 
 initialization
- //TestFramework.RegisterTest(TRandomPlusTest.Suite);
+ TestFramework.RegisterTest(TRandomPlusTest.Suite);
 
 end.
