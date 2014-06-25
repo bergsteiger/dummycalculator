@@ -56,22 +56,22 @@ begin
   opMinus:
   begin
    aForm.btnMinus.Click;
-   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(aA - aB));
+   Check(SameValue(StrToFloat(aForm.edtResult.Text), (aA - aB), c_Epsilon));
   end;
   opMul:
   begin
    aForm.btnMul.Click;
-   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(aA * aB));
+   Check(SameValue(StrToFloat(aForm.edtResult.Text), (aA * aB), c_Epsilon));
   end;
   opDiv:
   begin
    aForm.btnDiv.Click;
-   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(aA / aB));
+   Check(SameValue(StrToFloat(aForm.edtResult.Text), (aA / aB), c_Epsilon));
   end;
   opDivInt:
   begin
    aForm.btnDivInt.Click;
-   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(Round(aA) div Round(aB)));
+   Check(SameValue(StrToFloat(aForm.edtResult.Text), (Round(aA) div Round(aB)), c_Epsilon));
   end;
  end;//case GetOp
 end;

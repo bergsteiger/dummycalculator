@@ -11,13 +11,17 @@ uses
   MinusTest in 'Tests\GUI\MinusTest.pas',
   MulTest in 'Tests\GUI\MulTest.pas',
   DivTest in 'Tests\GUI\DivTest.pas',
-  RandomPlusTest in 'Tests\GUI\RandomPlusTest.pas',
+  RandomPlusTest in 'Tests\GUI\RandomTests\RandomPlusTest.pas',
   Calculator in 'Logic\Calculator.pas',
   CalculatorOperationViaEtalonTest in 'Tests\Logic\CalculatorOperationViaEtalonTest.pas',
   Tests.Logger in 'Tests\Utils\Tests.Logger.pas',
   CalculatorOperationViaLogicTest in 'Tests\Logic\CalculatorOperationViaLogicTest.pas',
   CalculatorOperationRandomSequenceTest in 'Tests\Logic\CalculatorOperationRandomSequenceTest.pas',
-  divinttest in 'tests\gui\divinttest.pas';
+  divinttest in 'tests\gui\divinttest.pas',
+  RandomMinusTest in 'Tests\GUI\RandomTests\RandomMinusTest.pas',
+  RandomDivTest in 'Tests\GUI\RandomTests\RandomDivTest.pas',
+  RandomMulTest in 'Tests\GUI\RandomTests\RandomMulTest.pas',
+  RandomDivIntTest in 'Tests\GUI\RandomTests\RandomDivIntTest.pas';
 
 {$R *.res}
 begin
