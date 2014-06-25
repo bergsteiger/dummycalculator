@@ -28,6 +28,7 @@ uses
 
 const
  c_Epsilon = 0.0001;
+ c_MulEpsilon = 0.1;
 
 function TOperationTest.GetFirstParam: Single;
 begin
@@ -61,7 +62,7 @@ begin
   opMul:
   begin
    aForm.btnMul.Click;
-   Check(SameValue(StrToFloat(aForm.edtResult.Text), (aA * aB), c_Epsilon));
+   Check(SameValue(StrToFloat(aForm.edtResult.Text), (aA * aB), c_MulEpsilon));
   end;
   opDiv:
   begin
