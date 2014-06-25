@@ -139,7 +139,7 @@
     </reference>
     <reference referencedUin="delphi:e_class:lib:DelphiWin32:TestFramework.TTestCase">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="140,-60,287,190" />
+      <property name="bounds" value="140,-60,287,176" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_field:lib:DelphiWin32:TestFramework.TTestCase.fMethod" />
       <reference referencedUin="delphi:e_method:lib:DelphiWin32:TestFramework.TTestCase.Invoke(TestFramework.TTestCase.TTestMethod)" />
@@ -156,7 +156,7 @@
       <property name="bounds_setted_by_user" value="True" />
       <reference referencedUin="delphi:l_gnt:src:DummyCalculator:CalculatorGUITest.TCalculatorGUITest:TestFramework.TTestCase">
         <property name="sourceAnchor" value="279,180" />
-        <property name="targetAnchor" value="279,130" />
+        <property name="targetAnchor" value="279,116" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:e_method:src:DummyCalculator:CalculatorGUITest.TCalculatorGUITest.VisitForm(MainForm.TfmMain)" />
