@@ -23,8 +23,11 @@ implementation
 uses
   TestFrameWork,
   Calculator,
-  SysUtils
-  ;
+  SysUtils,
+  Math;
+
+const
+ c_Epsilon = 0.0001;
 
 function TOperationTest.GetFirstParam: Single;
 begin
@@ -48,7 +51,7 @@ begin
   opAdd:
   begin
    aForm.btnAdd.Click;
-   Check((aForm.edtResult.Text) = TCalculator.FloatToStr(aA + aB));
+   Check(SameValue(StrToFloat(aForm.edtResult.Text), (aA + aB), c_Epsilon));
   end;
   opMinus:
   begin
