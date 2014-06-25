@@ -129,6 +129,10 @@
         <None Include="ModelSupport_DummyCalculator\DivIntTest\default.txvpck"/>
         <None Include="ModelSupport_DummyCalculator\DivIntTest\default.txaPackage"/>
         <None Include="ModelSupport_DummyCalculator\DivIntTest\default_diagram.tvsconfig"/>
+        <None Include="ModelSupport_DummyCalculator\RandomDivIntTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\RandomMulTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\RandomDivTest\default.txvpck"/>
+        <None Include="ModelSupport_DummyCalculator\RandomMinusTest\default.txvpck"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

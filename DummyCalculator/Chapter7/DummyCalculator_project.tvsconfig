@@ -17,4 +17,8 @@
   <Option Name="namespaceFolder.CalculatorOperationViaLogicTest" Type="System.String" Value="CalculatorOperationViaLogicTest" Category="General" IsBrowsable="False" />
   <Option Name="namespaceFolder.Tests.Logger" Type="System.String" Value="Tests\Logger" Category="General" IsBrowsable="False" />
   <Option Name="namespaceFolder.DivIntTest" Type="System.String" Value="DivIntTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.RandomDivTest" Type="System.String" Value="RandomDivTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.RandomMulTest" Type="System.String" Value="RandomMulTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.RandomDivIntTest" Type="System.String" Value="RandomDivIntTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.RandomMinusTest" Type="System.String" Value="RandomMinusTest" Category="General" IsBrowsable="False" />
 </TgConfig>
