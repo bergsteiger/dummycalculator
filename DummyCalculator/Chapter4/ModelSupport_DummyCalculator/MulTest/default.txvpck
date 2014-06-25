@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="40u158wd0bo_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:DummyCalculator:MulTest.TMulTest">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_method:src:DummyCalculator:MulTest.TMulTest.GetOp()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DummyCalculator:MulTest.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>
